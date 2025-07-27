@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import "../styles/globals.scss";
 
 export const metadata = {
@@ -19,7 +20,10 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

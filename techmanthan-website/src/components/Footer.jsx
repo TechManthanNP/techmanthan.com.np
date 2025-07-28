@@ -24,14 +24,24 @@ const Footer = () => {
               <a href="/about">About Us</a>
             </li>
             <li>
-              <a href="/programs">Programs</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
+              <a href="/careers">Careers</a>
             </li>
           </ul>
         </div>
-
+        <div className="footer-column">
+          <h4>Programs</h4>
+          <ul>
+            <li>
+              <a href="/">Accelerate</a>
+            </li>
+            <li>
+              <a href="/">Refine</a>
+            </li>
+            <li>
+              <a href="/">Create</a>
+            </li>
+          </ul>
+        </div>
         <div className="footer-column">
           <h4>Connect</h4>
           <ul>
@@ -43,9 +53,6 @@ const Footer = () => {
             </li>
             <li>
               <a href="#">LinkedIn</a>
-            </li>
-            <li>
-              <a href="#">Instagram</a>
             </li>
           </ul>
         </div>

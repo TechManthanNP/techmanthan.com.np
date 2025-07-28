@@ -1,5 +1,6 @@
 import AboutHero from "@/components/aboutPage/AboutHero";
 import Differentiators from "@/components/aboutPage/Differentiators";
+import MissionVision from "@/components/aboutPage/MissionVision";
 import StatsSection from "@/components/aboutPage/StatsSection";
 import Navbar from "../../components/Navbar";
 
@@ -9,8 +10,9 @@ export default function About() {
       <Navbar />
       <main>
         <AboutHero />
-        <Differentiators />
+        <MissionVision />
         <StatsSection />
+        <Differentiators />
       </main>
     </>
   );

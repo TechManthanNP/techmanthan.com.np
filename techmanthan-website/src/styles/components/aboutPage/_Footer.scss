@@ -2,14 +2,12 @@
   background-color: rgb(15, 23, 42);
   color: #ccc;
   padding: 3rem 2rem;
-  text-align: center;
   font-size: 0.9rem;
 
   .footer-top {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
     gap: 2rem;
@@ -21,6 +19,12 @@
         color: #fff;
         margin-bottom: 1rem;
         font-size: 1.1rem;
+      }
+
+      p {
+        line-height: 1.6;
+        max-width: 320px;
+        margin-bottom: 1rem;
       }
 
       ul {
@@ -42,6 +46,14 @@
         }
       }
     }
+
+    .footer-column:first-child {
+      margin-right: 150px;
+
+      @media (max-width: 768px) {
+        margin-right: 0;
+      }
+    }
   }
 
   .footer-bottom {
@@ -50,5 +62,17 @@
     padding-top: 1.5rem;
     font-size: 0.8rem;
     color: #aaa;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .footer-top {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .footer-column {
+      text-align: left;
+    }
   }
 }

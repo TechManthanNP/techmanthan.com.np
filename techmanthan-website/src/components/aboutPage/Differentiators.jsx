@@ -1,6 +1,5 @@
 "use client";
 
-import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import {
   FaFlask,
@@ -14,50 +13,58 @@ const cards = [
   {
     icon: <FaFlask />,
     title: "Focused on Innovation",
-    text: "Innovation is at the core of everything we do. From ideation to deployment, we constantly explore new technologies, frameworks, and methods to deliver smarter, faster, and more future-ready solutions.",
+    text: "Innovation is at the core of everything we do. From ideation to deployment, we explore cutting-edge technologies for smarter, faster, future-ready solutions.",
     color: "purple",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Local Impact",
-    text: "We believe global change starts with local action. Our work is deeply rooted in the needs and strengths of our communities, creating tech solutions that uplift, empower, and inspire from the ground up.",
+    text: "We drive global change through local action. Our tech solutions uplift and empower our communities from the ground up.",
     color: "orange",
   },
   {
     icon: <FaUserGraduate />,
     title: "Empowering Talents",
-    text: "We exist to unlock the potential of emerging talents. Through hands-on experience, mentorship, and access to cutting-edge tools, we help them grow into confident innovators and changemakers",
+    text: "We nurture future innovators through hands-on experience, mentorship, and access to powerful tools and platforms.",
     color: "green",
   },
   {
     icon: <FaUsersCog />,
     title: "Team Culture",
-    text: "Our culture is built on trust, ownership, and collaboration. We value diverse voices, encourage open dialogue, and create space for every team member to lead, learn, and grow",
+    text: "Our culture thrives on trust, ownership, and collaboration. We embrace diverse voices and foster space to grow.",
     color: "yellow",
   },
 ];
 
 const Differentiators = () => {
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "-100px", once: true });
+  const titleRef = useRef(null);
+  const [titleVisible, setTitleVisible] = useState(false);
 
   useEffect(() => {
-    if (isInView) {
-      setHasAnimated(true);
-    }
-  }, [isInView]);
+    const observer = new IntersectionObserver(
+      ([entry]) => setTitleVisible(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+
+    if (titleRef.current) observer.observe(titleRef.current);
+    return () => {
+      if (titleRef.current) observer.unobserve(titleRef.current);
+    };
+  }, []);
 
   return (
-    <section className="differentiators-section" ref={ref}>
-      <div className="heading">
+    <section className="differentiators-section">
+      <div
+        ref={titleRef}
+        className={`heading ${titleVisible ? "animate" : ""}`}
+      >
         <h4>WHAT MAKES US DIFFERENT</h4>
         <h2>
           Our focus on these key differentiators allows us to consistently
           provide exceptional value to our clients.
         </h2>
       </div>
-      <div className={`card-grid ${hasAnimated ? "visible" : ""}`}>
+      <div className="card-grid">
         {cards.map((card, index) => (
           <div key={index} className={`card ${card.color}`}>
             <div className={`icon icon-${card.color}`}>{card.icon}</div>

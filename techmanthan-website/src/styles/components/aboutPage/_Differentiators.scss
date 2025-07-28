@@ -1,28 +1,35 @@
 .differentiators-section {
   padding: 6.5rem 13rem;
-  // background: radial-gradient(
-  //   ellipse at center top,
-  //   rgba(30, 41, 59, 0.9) 0%,
-  //   rgba(15, 23, 42, 1) 40%,
-  //   #0a0f1e 100%
-  // );
   color: #1e293b;
   text-align: center;
   background-color: #fff;
+
   .heading {
     max-width: 800px;
     margin: 0 auto 7rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 3s ease;
+
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     h4 {
       font-size: 1rem;
       margin-bottom: 1rem;
       font-family: "Hanken Grotesk", sans-serif;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     h2 {
       font-size: 1.8rem;
-      line-height: 1.4;
+      line-height: 1.5;
       font-family: "Hanken Grotesk", sans-serif;
+      color: #1e293b;
     }
   }
 
@@ -32,18 +39,10 @@
     gap: 1.5rem;
     justify-content: center;
     margin-top: 4rem;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    &.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   .card {
     background: linear-gradient(to top, #0a0f1e, #0f172a, #1e293b);
-
     border: 1px solid #1e293b;
     padding: 3rem 2.5rem;
     border-radius: 1rem;
@@ -51,12 +50,13 @@
     text-align: left;
     position: relative;
     overflow: hidden;
+    height: 380px;
     box-shadow: 0 0 0 transparent;
-    position: relative;
 
     .icon {
       font-size: 2.5rem;
       margin-bottom: 0.95rem;
+
       &-orange {
         color: #ff5c33;
       }
@@ -70,6 +70,7 @@
         color: #ffc107;
       }
     }
+
     .icon-bg {
       position: absolute;
       bottom: -1rem;
@@ -95,19 +96,6 @@
       z-index: 1;
     }
 
-    .icon-bg.icon-orange {
-      color: #ff5c33;
-    }
-    .icon-bg.icon-purple {
-      color: #b366ff;
-    }
-    .icon-bg.icon-green {
-      color: #33cc99;
-    }
-    .icon-bg.icon-yellow {
-      color: #ffc107;
-    }
-
     h3 {
       font-size: 1.2rem;
       margin-bottom: 0.85rem;
@@ -120,6 +108,7 @@
       line-height: 1.75;
     }
 
+    // Color variations on hover
     &.orange:hover {
       border-color: #ff5c33;
       background: radial-gradient(circle at bottom right, #330000, #111);

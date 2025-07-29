@@ -1,73 +1,59 @@
-'use client';
-
-import { useEffect, useRef, useState } from 'react';
-import '../styles/components/_Hero.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
-import { motion, useAnimationFrame } from 'framer-motion';
-
+"use client";
+import { motion, useAnimationFrame } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "../styles/components/_Hero.scss";
 const sectionVariants = {
-  initial: { backgroundColor: '#ffffff' },
-  animate: { backgroundColor: 'rgba(15, 23, 42, 1)' },
+  initial: { backgroundColor: "#ffffff" },
+  animate: { backgroundColor: "rgba(15, 23, 42, 1)" },
 };
-
 const fadeUpVariants = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
 };
-
 const Hero = () => {
   const [showGradient, setShowGradient] = useState(false);
-
   // For animating the path dash offset (line drawing)
   const pathRef = useRef(null);
   const [pathLength, setPathLength] = useState(0);
-
   // Circle position state
   const [circlePos, setCirclePos] = useState({ x: 0, y: 0 });
-
   // Circle animation progress (0 to 1, start at 1 to begin at end)
   const [progress, setProgress] = useState(1);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowGradient(true);
     }, 2000); // match animation duration
-
     return () => clearTimeout(timer);
   }, []);
-
   useEffect(() => {
     if (pathRef.current) {
       const length = pathRef.current.getTotalLength();
       setPathLength(length);
     }
   }, []);
-
   // Animate circle progress along path every animation frame
   useAnimationFrame((t, delta) => {
     setProgress((prev) => (prev - delta / 10000 + 1) % 1);
   });
-
   // Update circle position when progress or pathLength changes
   useEffect(() => {
     if (!pathRef.current || pathLength === 0) return;
-
-    const lengthAtProgress = pathLength * (1-progress);
+    const lengthAtProgress = pathLength * (1 - progress);
     const point = pathRef.current.getPointAtLength(lengthAtProgress);
     setCirclePos({ x: point.x, y: point.y });
   }, [progress, pathLength]);
-
   return (
     <motion.section
-      className={`hero-section ${showGradient ? 'gradient-visible' : ''}`}
+      className={`hero-section ${showGradient ? "gradient-visible" : ""}`}
       variants={sectionVariants}
       initial="initial"
       animate="animate"
-      transition={{ duration: 2, ease: 'easeInOut' }}
+      transition={{ duration: 2, ease: "easeInOut" }}
     >
       {/* Background Animation with Fade-in */}
       <motion.svg
@@ -77,8 +63,8 @@ const Hero = () => {
         preserveAspectRatio="none"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 1.2, duration: 1, ease: 'easeOut' }}
-        style={{ overflow: 'visible' }}
+        transition={{ delay: 1.2, duration: 1, ease: "easeOut" }}
+        style={{ overflow: "visible" }}
       >
         {/* Animated path with stroke-dashoffset for line-drawing */}
         <motion.path
@@ -90,38 +76,37 @@ const Hero = () => {
           strokeDasharray={pathLength}
           strokeDashoffset={pathLength}
           animate={{ strokeDashoffset: 0 }}
-          transition={{ delay: 1.2, duration: 3, ease: 'easeInOut' }}
+          transition={{ delay: 1.2, duration: 3, ease: "easeInOut" }}
         />
-
         {/* Circle moving along the path */}
         <motion.circle
           r="4"
           fill="white"
           style={{
-            filter: 'blur(1px)',
+            filter: "blur(1px)",
             translateX: circlePos.x,
             translateY: circlePos.y,
           }}
         />
       </motion.svg>
-
       <motion.div
         className="hero-content"
         variants={fadeUpVariants}
         initial="initial"
         animate="animate"
-        transition={{ delay: 0.3, duration: 1, ease: 'easeOut' }}
+        transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
       >
-        <h1>Empowering the Future</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div className="text">
+          <h1>Empowering the Future</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
       </motion.div>
-
       <motion.div
         className="hero-slider"
         variants={fadeUpVariants}
         initial="initial"
         animate="animate"
-        transition={{ delay: 0.7, duration: 1, ease: 'easeOut' }}
+        transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
       >
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
@@ -146,7 +131,6 @@ const Hero = () => {
           </SwiperSlide>
         </Swiper>
       </motion.div>
-
       {/* Animated Scroll Indicator */}
       <motion.div
         className="scroll-indicator"
@@ -159,7 +143,7 @@ const Hero = () => {
         transition={{
           repeat: Infinity,
           duration: 2,
-          ease: 'easeInOut',
+          ease: "easeInOut",
           delay: 1.5,
         }}
       >
@@ -178,5 +162,4 @@ const Hero = () => {
     </motion.section>
   );
 };
-
 export default Hero;

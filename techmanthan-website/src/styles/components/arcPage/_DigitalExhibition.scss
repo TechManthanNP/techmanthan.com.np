@@ -1,0 +1,59 @@
+.digital-exhibition {
+  padding: 4rem 0rem;
+  background-color: #f1f5f9;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    color: #0f172a;
+    margin-bottom: 2rem;
+  }
+
+  .scroll-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .scroll-track {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: infinite-scroll 30s linear infinite;
+  }
+
+  .project-card {
+    flex: 0 0 auto;
+    width: 310px;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .project-title {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 0.5rem;
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

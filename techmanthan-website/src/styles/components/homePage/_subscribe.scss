@@ -1,0 +1,62 @@
+.subscribe-section {
+  background-color: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #1e293b;
+
+  h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: "hanken-grotesk", sans-serif;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #475569;
+    font-family: "hanken-grotesk", sans-serif;
+  }
+
+  .subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    input {
+      padding: 0.9rem 1rem;
+      width: 100%;
+      max-width: 500px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 1rem;
+      background-color: #f8fafc;
+
+      &::placeholder {
+        color: #94a3b8;
+        opacity: 1;
+        font-size: 1rem;
+      }
+      &:focus {
+        border-color: #f97316;
+        outline: none;
+      }
+    }
+
+    button {
+      background-color: #f97316;
+      color: white;
+      border: none;
+      padding: 0.9rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease-in-out;
+      font-family: "hanken-grotesk", sans-serif;
+      &:hover {
+        background-color: #ea580c;
+      }
+    }
+  }
+}

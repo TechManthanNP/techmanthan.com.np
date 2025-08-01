@@ -1,15 +1,24 @@
-export default function Testimonial({ quote, author, role, highlight }) {
-    return (
-      <div className="testimonial">
-        <blockquote>{quote}</blockquote>
+import { FaQuoteLeft } from "react-icons/fa";
+
+export default function Testimonial({ quote, author, role, highlight, image }) {
+
+  return (
+    <div className="testimonial">
+      <div className="image-placeholder">
+        <img src={image} alt={author} />
+      </div>
+      <div className="testimonial-content">
+        <FaQuoteLeft className="quote-icon" />
+        <p className="quote">{quote}</p>
         <div className="testimonial-footer">
-          <div>
-            <p className="role">{role}</p>
-            <p className="author">{author}</p>
+          <div className="footer-content">
+            <p className="author ">{author}</p>
+            <p className="meta ">
+              {role} | <span className="highlight">{highlight}</span>
+            </p>
           </div>
-          <span className="highlight">{highlight}</span>
         </div>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}

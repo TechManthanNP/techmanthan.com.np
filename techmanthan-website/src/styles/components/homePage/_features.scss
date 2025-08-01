@@ -1,0 +1,44 @@
+.features {
+    padding: 4rem 2rem;
+    text-align: center;
+  
+    .section-heading {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+  
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        span {
+          color: #ff7a00; // orange highlight
+        }
+      }
+      p {
+        color: #666;
+        margin-top: 0.5rem;
+      }
+    }
+  
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+  
+    .feature-card {
+      background: #0b1a2b;
+      color: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: left;
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+  }
+  

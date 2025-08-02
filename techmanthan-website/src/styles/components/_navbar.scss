@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 16px 88px 16px 88px;
+  padding: 6px 88px 6px 88px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -35,7 +35,7 @@
   &__links {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 4rem;
     list-style: none;
     font-weight: 500;
     margin: 0;

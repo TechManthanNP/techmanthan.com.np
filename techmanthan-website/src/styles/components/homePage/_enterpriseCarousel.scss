@@ -1,3 +1,4 @@
+@import "../../abstracts/variables";
 .enterprise-section {
   height: 75vh;
   display: flex;
@@ -17,13 +18,15 @@
     padding: 10px;
     flex: 1;
     h4 {
-      font-size: 2.1rem;
+      font-family: $font-space-grotesk;
+      font-size: 40px;
       font-weight: 600;
       color: #000f2e;
     }
 
     h2 {
-      font-size: 3.5rem;
+      font-family: $font-space-grotesk;
+      font-size: 64px;
       font-weight: 700;
       color: #eb6600;
       margin-top: 0.3rem;
@@ -31,16 +34,17 @@
     }
 
     p {
-      font-size: 1.6rem;
+      font-family: $font-inter;
+      font-size: 32px;
       width: 70%;
-      font-weight: 600;
+      font-weight: 700;
       color: #1a1a1a;
     }
   }
 
   .carousel-wrapper {
     width: 60%;
-    flex: 1.1;
+    flex: 1.2;
     position: relative;
     min-width: 0;
     margin-right: 4rem;
@@ -78,6 +82,7 @@
       }
 
       h3 {
+        font-family: $font-space-grotesk;
         font-size: 1.7rem;
         font-weight: 700;
         text-decoration: underline;
@@ -86,6 +91,7 @@
       }
 
       p {
+        font-family: $font-inter;
         font-size: 1.2rem;
         font-weight: 500;
         color: #333;
@@ -102,6 +108,10 @@
       position: absolute;
       top: 40%;
       transform: translateY(-50%);
+      // border: 2px red solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: #fff;
       border: none;
       padding: 0.8rem;

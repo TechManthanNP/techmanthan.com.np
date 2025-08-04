@@ -1,7 +1,9 @@
+@import '../../abstracts/variables';
+
 .features {
     padding: 4rem 2rem;
     text-align: center;
-    min-height: 92vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +20,8 @@
         justify-content: flex-start;
 
         h2 {
-            font-size: 2.4rem;
+            font-size: 64px;
+           font-family: $font-space-grotesk; 
             font-weight: 700;
             margin-bottom: 1rem;
             span {
@@ -28,18 +31,20 @@
         p {
             color: #000000;
             margin-top: 2rem;
-            font-size: 1.5rem;
+            font-size: 26px;
+            font-weight: 400;
+            font-family: $font-inter;
             width: 75%;
         }
     }
 
     .features-grid {
-        max-width: 80%;
+        max-width: 85%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 1.5rem;
     }
-    
+
     .feature-card {
         height: 30rem;
         color: #fff;
@@ -53,19 +58,25 @@
         gap: 2rem;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
-        
-        &:hover{
-           
-            box-shadow: 2px 8px 20px rgba(36, 22, 96, 0.4);
+
+        &:hover {
+            transform: translateX(-50rem);
+            box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.829);
         }
         h3 {
-            margin-top: 1.8rem;
-            font-size: 1.7rem;
+            font-family: $font-space-grotesk;
+            font-weight: 700;
+            margin-top: 2rem;
+            font-size: 32px;
             text-decoration: underline;
             margin-bottom: 0.5rem;
         }
         p {
-            font-size:1.3rem;
+            // font-size: 1.4rem;
+            font-family: $font-inter;
+            margin-top: 1rem;
+            font-weight: 400;
+            font-size: 26px;
             line-height: 1.5;
             text-align: center;
         }

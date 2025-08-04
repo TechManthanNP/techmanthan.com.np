@@ -1,29 +1,54 @@
 "use client";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 import "../../styles/components/homePage/_productShowcase.scss";
+
+// Animation variant for each child
+const fadeItem = {
+  hidden: { opacity: 0, y: 30, filter: "brightness(0.6)" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "brightness(1)",
+    transition: { duration: 1.2, ease: "easeOut" },
+  },
+};
 
 export default function ProductShowcase() {
   return (
     <section className="product-showcase">
-      <div className="header">
+      {/* Header */}
+      <motion.div
+        className="header"
+        variants={fadeItem}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }} // 👈 replay on every scroll
+      >
         <h2>Enterprise-Grade AI Products</h2>
         <p>
           Explore a suite of AI-powered products engineered for performance,
           scalability, and practical impact across industries.
         </p>
-      </div>
+      </motion.div>
 
       <div className="card-layout">
         {/* Left Column */}
         <div className="left-column">
-          <div className="card smarthrms">
+          <motion.div
+            className="card smarthrms"
+            variants={fadeItem}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+          >
             <div className="card-text">
               <h3>SmartHRMS</h3>
               <div className="tag">Predictive AI</div>
               <ul>
                 <li>
                   Next Generation HRMS designed to streamline HR operations and
-                  deliver predictive workforce insights.{" "}
+                  deliver predictive workforce insights.
                 </li>
               </ul>
               <button>
@@ -38,9 +63,15 @@ export default function ProductShowcase() {
                 alt="HRMS Overlay"
               />
             </div>
-          </div>
+          </motion.div>
 
-          <div className="card fiscalmind">
+          <motion.div
+            className="card fiscalmind"
+            variants={fadeItem}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+          >
             <div className="card-text">
               <h3>FiscalMind</h3>
               <div className="tag">Automation</div>
@@ -65,11 +96,17 @@ export default function ProductShowcase() {
                 alt="Finance Overlay"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Right Column */}
-        <div className="card skillmentor">
+        <motion.div
+          className="card skillmentor"
+          variants={fadeItem}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+        >
           <div className="card-text">
             <h3>SkillMentor AI</h3>
             <div className="tags">
@@ -94,7 +131,7 @@ export default function ProductShowcase() {
           <div className="image-single">
             <img src="/images/skillMentor.png" alt="SkillMentor UI" />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

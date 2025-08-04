@@ -1,33 +1,47 @@
+@import "../../abstracts/variables";
 .subscribe-section {
-  background-color: #fff;
+  // background-color: #fff;
+  // background-color:#0f172a;
+  background: linear-gradient(to bottom, #1d2d52, #030b1a);
+  border-bottom: 1px rgba(255, 255, 255, 0.199) solid;
+  border-width: 1px;
   padding: 5rem 2rem;
   text-align: center;
   color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h2 {
+    font-family: $font-space-grotesk;
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    font-family: "hanken-grotesk", sans-serif;
+    color: #ffffff;
+    // font-family: "hanken-grotesk", sans-serif;
   }
 
   p {
+    font-family: $font-inter;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: #475569;
-    font-family: "hanken-grotesk", sans-serif;
+    color: #ffffff;
+    // font-family: "hanken-grotesk", sans-serif;
   }
 
   .subscribe-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    // align-items: center;
+    // border: 2px red solid;
     gap: 1rem;
+    width: 70%;
 
     input {
       padding: 0.9rem 1rem;
       width: 100%;
-      max-width: 500px;
+      max-width: 800px;
       border: 1px solid #cbd5e1;
       border-radius: 6px;
       font-size: 1rem;

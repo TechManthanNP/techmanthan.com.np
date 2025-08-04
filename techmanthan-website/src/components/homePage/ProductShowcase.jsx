@@ -92,7 +92,7 @@ export default function ProductShowcase() {
             </button>
           </div>
           <div className="image-single">
-            <img src="/images/skillmentor.png" alt="SkillMentor UI" />
+            <img src="/images/skillMentor.png" alt="SkillMentor UI" />
           </div>
         </div>
       </div>

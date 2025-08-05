@@ -7,11 +7,11 @@ import { useEffect, useState } from "react";
 import "../styles/components/_navbar.scss";
 
 const navLinks = [
+  { label: "AI Products", href: "/products" },
+  { label: "Solutions", href: "/service" },
   { label: "About Us", href: "/about" },
-  { label: "Service", href: "/service" },
-  { label: "Products", href: "/products" },
-  { label: "Careers", href: "/careers" },
-  { label: "ARC", href: "/arc" },
+  { label: "Careers", href: "/arc" },
+  // { label: "ARC", href: "/arc" },
 ];
 
 const Navbar = () => {

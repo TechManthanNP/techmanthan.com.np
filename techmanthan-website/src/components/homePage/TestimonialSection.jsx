@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Testimonial from "./Testimonials";
 import "../../styles/components/homePage/_testimonials.scss";
 
@@ -32,46 +32,41 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialSlider() {
+export default function TestimonialCarousel() {
   const [index, setIndex] = useState(0);
-  const items = [...testimonials, ...testimonials]; // duplicate for smooth looping
-  const total = testimonials.length;
 
+  // autoplay every 3s
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => prev + 1);
-    }, 3000); // 3 seconds per testimonial
+      setIndex((prev) => (prev + 1) % testimonials.length);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
-
-  // reset index back to 0 once we've shown all duplicates
-  useEffect(() => {
-    if (index >= items.length) {
-      setIndex(0);
-    }
-  }, [index, items.length]);
 
   return (
     <section className="testimonial-slider">
       <div className="slider-container">
-        <motion.div
-          className="slider-track"
-          animate={{ x: `-${index * 100}%` }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        >
-          {items.map((t, i) => (
-            <div className="slide" key={i}>
-              <Testimonial {...t} />
-            </div>
-          ))}
-        </motion.div>
+        <div className="slider-track">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={index}
+              className="slide"
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: "0%", opacity: 1 }}
+              exit={{ x: "-100%", opacity: 0 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+            >
+              <Testimonial {...testimonials[index]} />
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
 
       <div className="pagination">
         {testimonials.map((_, i) => (
           <span
             key={i}
-            className={i === index % total ? "dot active" : "dot"}
+            className={i === index ? "dot active" : "dot"}
             onClick={() => setIndex(i)}
           />
         ))}

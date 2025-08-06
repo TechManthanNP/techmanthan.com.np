@@ -78,3 +78,26 @@
         }
     }
 }
+@media (max-width: 576px) {
+    .subscribe-section{
+        .subscribe-form{
+            width: 100%;
+            input{
+                max-width: 75%; 
+            }
+            button{
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 1200px) {
+}

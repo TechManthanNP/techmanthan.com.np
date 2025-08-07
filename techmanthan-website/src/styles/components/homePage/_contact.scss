@@ -118,10 +118,43 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+    .contact-section{
+        padding: 5rem 3rem;
+        gap: 2rem;
+        .map-container {
+            iframe {
+                height: 18rem;
+                border: none;
+                border-radius: 8px;
+            }
+        }
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+    .contact-section{
+        padding: 5rem 3rem;
+        gap: 2rem;
+        .map-container {
+            iframe {
+                height: 30rem;
+                border: none;
+                border-radius: 8px;
+            }
+        }
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+    .contact-section{
+        padding: 5rem 3rem;
+        gap: 2rem;
+        .map-container {
+            iframe {
+                height: 30rem;
+                border: none;
+                border-radius: 8px;
+            }
+        }
+    }
 }
 @media (min-width: 1200px) {
 }

@@ -20,10 +20,10 @@
         justify-content: flex-start;
 
         h2 {
-            font-size: 64px;
+            font-size: 3rem;
             font-family: $font-space-grotesk;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             span {
                 color: #ff7a00; // orange highlight
             }
@@ -31,7 +31,7 @@
         p {
             color: #000000;
             margin-top: 2rem;
-            font-size: 26px;
+            font-size: 25px;
             font-weight: 400;
             font-family: $font-inter;
             width: 75%;
@@ -39,7 +39,7 @@
     }
 
     .features-grid {
-        max-width: 85%;
+        max-width: 95%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: 1.5rem;
@@ -67,7 +67,7 @@
             font-family: $font-space-grotesk;
             font-weight: 700;
             margin-top: 2rem;
-            font-size: 32px;
+            font-size: 1.5rem;
             text-decoration: underline;
             margin-bottom: 0.5rem;
         }
@@ -76,7 +76,7 @@
             font-family: $font-inter;
             margin-top: 1rem;
             font-weight: 400;
-            font-size: 26px;
+            font-size: 1.2rem;
             line-height: 1.5;
             text-align: center;
         }
@@ -116,10 +116,142 @@
     }
 }
 @media (min-width: 576px) and (max-width: 767px) {
+    .features {
+        .section-heading {
+            max-width: 90%;
+            h2 {
+                // margin-top: 2rem;
+                font-size: 2.2rem;
+                margin-bottom: 0.7rem;
+            }
+            p {
+                font-size: 1.2rem;
+                // border: 2px red solid;
+                width: 100%;
+            }
+
+        }
+        .features-grid{
+            max-width: 95%;
+            .feature-card{
+                height: 15rem;
+                h3{
+                    margin-top: 0;
+                    font-size: 22px;
+                    margin-bottom: 0;
+                }
+                p{
+                    font-size: 16px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+    .features {
+        .section-heading {
+            max-width: 90%;
+            h2 {
+                // margin-top: 2rem;
+                font-size: 2.8rem;
+                margin-bottom: 0.5rem;
+            }
+            p {
+                font-size: 1.6rem;
+                // border: 2px red solid;
+                width: 100%;
+            }
+
+        }
+        .features-grid{
+            max-width: 85%;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            .feature-card{
+                height: 20rem;
+                h3{
+                    margin-top: 0;
+                    font-size: 28px;
+                    margin-bottom: 0;
+                }
+                p{
+                    font-size: 20px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+    .features {
+        .section-heading {
+            max-width: 90%;
+            h2 {
+                // margin-top: 2rem;
+                font-size: 2.8rem;
+                margin-bottom: 0.5rem;
+            }
+            p {
+                font-size: 1.6rem;
+                // border: 2px red solid;
+                width: 100%;
+            }
+
+        }
+        .features-grid{
+            max-width: 98%;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            .feature-card{
+                height: 26rem;
+                h3{
+                    margin-top: 1.5rem;
+                    font-size: 22px;
+                    margin-bottom: 0;
+                }
+                p{
+                    font-size: 18px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 1200) {
+    .features {
+        .section-heading {
+            max-width: 90%;
+            h2 {
+                // margin-top: 2rem;
+                font-size: 2.8rem;
+                margin-bottom: 0.5rem;
+            }
+            p {
+                font-size: 1.6rem;
+                // border: 2px red solid;
+                width: 100%;
+            }
+
+        }
+        .features-grid{
+            max-width: 98%;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            .feature-card{
+                height: 26rem;
+                h3{
+                    margin-top: 1.5rem;
+                    font-size: 22px;
+                    margin-bottom: 0;
+                }
+                p{
+                    font-size: 18px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }

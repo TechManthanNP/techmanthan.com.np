@@ -20,14 +20,14 @@
         // border: 2px red solid;
         h4 {
             font-family: $font-space-grotesk;
-            font-size: 40px;
+            font-size: 2.1rem;
             font-weight: 600;
             color: #000f2e;
         }
 
         h2 {
             font-family: $font-space-grotesk;
-            font-size: 64px;
+            font-size: 3.2rem;
             font-weight: 700;
             color: #eb6600;
             margin-top: 0.3rem;
@@ -36,15 +36,15 @@
 
         p {
             font-family: $font-inter;
-            font-size: 32px;
-            width: 70%;
+            font-size: 1.8rem;
+            width: 90%;
             font-weight: 700;
             color: #1a1a1a;
         }
     }
 
     .carousel-wrapper {
-        width: 60%;
+        width: 50%;
         flex: 1.2;
         position: relative;
         min-width: 0;
@@ -59,11 +59,11 @@
         .embla__container {
             height: 100%;
             display: flex;
-            gap: 2.1rem;
+            gap: 1rem;
         }
 
         .embla__slide {
-            flex: 0 0 65%;
+            flex: 0 0 48%;
             min-width: 0;
             max-width: 400px;
         }
@@ -84,7 +84,7 @@
 
             h3 {
                 font-family: $font-space-grotesk;
-                font-size: 1.7rem;
+                font-size: 1.4rem;
                 font-weight: 700;
                 text-decoration: underline;
                 margin: 1rem;
@@ -93,11 +93,11 @@
 
             p {
                 font-family: $font-inter;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 font-weight: 500;
                 color: #333;
                 margin: 1rem 1rem 1rem;
-                margin-top: 1.5rem;
+                margin-top: 1rem;
             }
 
             &:hover {
@@ -178,7 +178,7 @@
 }
 @media (max-width: 576px) {
     .enterprise-section {
-      height: 85vh;
+        height: 85vh;
         padding: 0;
         // flex-direction: column;
         .content-left {
@@ -200,7 +200,7 @@
         padding-bottom: 2rem;
         .carousel-wrapper {
             flex: none;
-            
+
             width: 60%;
             // height: fit-content;
             // border: 2px red solid;
@@ -208,10 +208,9 @@
             .embla__container {
                 // gap: 0.5rem;
                 gap: 1rem;
-
             }
             .card {
-              margin-left: 1.5rem;
+                margin-left: 1.5rem;
                 // border: 2px red solid;
                 height: 100%;
                 width: 300px;
@@ -219,7 +218,7 @@
                     height: 50%;
                 }
                 h3 {
-                  margin: 1rem;
+                    margin: 1rem;
                     font-size: 1.1rem;
                     // margin: 0;
                 }
@@ -228,20 +227,166 @@
                     font-size: 1rem;
                 }
             }
-            
         }
-        // .card:last-child{
-        //   // min-width: 110%;
-        //   // margin-right: 10rem;
-        //   border: 2px red solid;
-        // }
     }
 }
 @media (min-width: 576px) and (max-width: 767px) {
+    .enterprise-section {
+        height: 85vh;
+        padding: 0;
+        // flex-direction: column;
+        .content-left {
+            max-width: 100%;
+            // border: 2px rgb(157, 255, 0) solid;
+            align-items: center;
+            h4 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 2.2rem;
+                margin-top: 0.1rem;
+                margin-bottom: 1.2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        padding-bottom: 2rem;
+        .carousel-wrapper {
+            flex: none;
+            width: 60%;
+            margin: 0;
+            .embla__container {
+                // gap: 0.5rem;
+                gap: 1rem;
+            }
+            .embla__slide {
+                flex: 0 0 100%;
+                min-width: 0;
+                max-width: 400px;
+            }
+            .card {
+                margin-left: 3.8rem;
+                height: 100%;
+                width: 300px;
+                img {
+                    height: 50%;
+                }
+                h3 {
+                    margin: 1rem;
+                    font-size: 1.1rem;
+                }
+                p {
+                    margin-top: 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+    .enterprise-section {
+        padding: 2rem 4rem;
+        gap: 0rem;
+        .content-left {
+            width: 50%;
+            flex: none;
+            h4 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 36px;
+                margin-bottom: 2.2rem;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        .carousel-wrapper {
+            height: 80%;
+            .embla__slide {
+                flex: 0 0 100%;
+                min-width: 0;
+                max-width: 400px;
+            }
+            .card {
+                img {
+                    width: 100%;
+                    height: 45%;
+                    object-fit: cover;
+                }
+                h3 {
+                    font-size: 1.4rem;
+                }
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+            .carousel-btn{
+                &.left{
+                    left: -4rem;
+                }
+                &.right{
+                    right: -4rem;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+    .enterprise-section {
+        height: 65vh;
+        padding: 2rem 4rem;
+        gap: 0rem;
+        .content-left {
+            width: 40%;
+            // flex: none;
+            h4 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 36px;
+                margin-bottom: 2.2rem;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        .carousel-wrapper {
+            height: 80%;
+            .embla__container {
+                height: 100%;
+                display: flex;
+                gap: 1.5rem;
+            }
+            .embla__slide {
+                flex: 0 0 46%;
+                min-width: 0;
+                max-width: 400px;
+            }
+            .card {
+                img {
+                    width: 100%;
+                    height: 45%;
+                    object-fit: cover;
+                }
+                h3 {
+                    font-size: 1.4rem;
+                }
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+            .carousel-btn{
+                &.left{
+                    left: -4rem;
+                }
+                &.right{
+                    right: -4rem;
+                }
+            }
+        }
+    }
 }
 @media (min-width: 1200px) {
 }

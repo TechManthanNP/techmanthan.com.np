@@ -1,7 +1,5 @@
 @import "../../abstracts/variables";
 .subscribe-section {
-    // background-color: #fff;
-    // background-color:#0f172a;
     background: linear-gradient(to bottom, #1d2d52, #030b1a);
     border-bottom: 1px rgba(255, 255, 255, 0.199) solid;
     border-width: 1px;
@@ -94,10 +92,46 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+    .subscribe-section{
+        .subscribe-form{
+            width: 100%;
+            input{
+                max-width: 75%; 
+            }
+            button{
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+    .subscribe-section{
+        .subscribe-form{
+            width: 100%;
+            input{
+                max-width: 75%; 
+            }
+            button{
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+    .subscribe-section{
+        .subscribe-form{
+            width: 100%;
+            input{
+                max-width: 75%; 
+            }
+            button{
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
 }
 @media (min-width: 1200px) {
 }

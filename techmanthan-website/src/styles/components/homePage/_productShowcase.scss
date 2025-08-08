@@ -154,7 +154,7 @@
             }
 
             .image-single {
-                width: 90%;
+                width: 100%;
                 height: 100%;
                 overflow: hidden;
                 border-radius: 1rem;
@@ -166,9 +166,9 @@
 
                 img {
                     width: 90%;
-                    height: 100%;
+                    // height: 100%;
                     object-fit: cover;
-                    object-position: right bottom;
+                    object-position: center;
                     border-radius: 1rem;
                     padding: 0;
                     display: block;

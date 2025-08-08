@@ -8,25 +8,25 @@ export default function FeaturesSection() {
             title: "Tailored Intelligence",
             description:
                 "Solutions designed around specific workflows, domain context, and organizational objectives. Never one-size fits-all",
-            image: "/images/intelligence-card.jpg"
+            // image: "/images/intelligence-card.jpg"
         },
         {
             title: "Domain Alignment",
             description:
                 "Expertise across industries including finance, healthcare, logistics, and education ensures relevance and precision.",
-            image: "/images/alignment.jpg"
+            // image: "/images/alignment.jpg"
         },
         {
             title: "Secure & Scalable",
             description:
                 "Built with enterprise-grade security, compliance readiness, and scalable architectures for sustainable growth.",
-            image: "/images/secure.jpg"
+            // image: "/images/secure.jpg"
         },
         {
             title: "Agile Execution",
             description:
                 "From strategic design to full deployment, solutions are developed and implemented with long-term impact in mind.",
-            image: "/images/end-to-end-execution.webp"
+            // image: "/images/end-to-end-execution.webp"
         },
     ];
 
@@ -45,7 +45,7 @@ export default function FeaturesSection() {
                         title={f.title}
                         description={f.description}
                         delay={i * 0.2}
-                        image={f.image}
+                        // image={f.image}
                     />
                 ))}
             </div>

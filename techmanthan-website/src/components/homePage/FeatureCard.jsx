@@ -1,20 +1,20 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function FeatureCard({ title, description, delay = 0, image }) {
-  const cardStyle = {
-    backgroundImage: `
-      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url(${image})
-    `,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
+export default function FeatureCard({ title, description, delay = 0 }) {
+  // const cardStyle = {
+  //   backgroundImage: `
+  //     linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  //     url(${image})
+  //   `,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  // };
   return (
    
     <motion.div
       className="feature-card"
-      style={cardStyle}
+      // style={cardStyle}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut", delay }}

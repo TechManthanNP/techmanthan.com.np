@@ -94,9 +94,16 @@ export default function EnterpriseCarousel() {
         <motion.h4 variants={fadeItem}>AI Solutions That Drive</motion.h4>
         <motion.h2 variants={fadeItem}>Business Outcomes</motion.h2>
         <motion.p variants={fadeItem}>
-          Purpose-built to solve real enterprise challenges.
-          <br />
-          Powered by expert teams and advanced technology.
+          <ul className="arrow-bullets">
+            <li>
+              <span className="arrow-animation" />
+              Purpose-built to solve real enterprise challenges.
+            </li>
+            <li>
+              <span className="arrow-animation" />
+              Powered by expert teams and advanced technology.
+            </li>
+          </ul>
         </motion.p>
       </motion.div>
 

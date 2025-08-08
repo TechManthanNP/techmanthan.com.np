@@ -2,7 +2,7 @@
 .enterprise-section {
     max-width: 100vw;
     height: 75vh;
-    padding: 5rem 8rem;
+    padding: 4rem 5rem;
     gap: 2rem;
     background: #f2f2f2;
     display: flex;
@@ -34,11 +34,80 @@
         }
 
         p {
-            font-family: $font-inter;
-            font-size: 1.8rem;
-            width: 90%;
-            font-weight: 700;
-            color: #1a1a1a;
+            font-feature-settings: $font-inter;
+            max-width: 80%;
+            .arrow-bullets {
+                list-style: none;
+                padding-left: 0;
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                justify-content: center;
+
+                li {
+                    position: relative;
+                    padding-left: 2.5rem;
+                    margin-bottom: 1.5rem;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: #000000;
+
+                    .arrow-animation {
+                        position: absolute;
+                        left: 0;
+                        top: 0rem;
+                        display: flex;
+                        gap: 2px;
+                    }
+
+                    .arrow-animation::before,
+                    .arrow-animation::after,
+                    .arrow-animation span {
+                        content: ">";
+                        font-weight: bold;
+                        font-size: 2rem;
+                        color: transparent;
+                        background: linear-gradient(90deg, #00f0ff, #001026);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        opacity: 0;
+                        animation: arrowFade 1.5s ease-in-out infinite;
+                    }
+
+                    .arrow-animation::before {
+                        animation-delay: 0s;
+                        font-size: 1.1rem;
+                    }
+
+                    .arrow-animation span {
+                        animation-delay: 0.25s;
+                        font-size: 3rem;
+                    }
+
+                    .arrow-animation::after {
+                        animation-delay: 0.5s;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+
+            @keyframes arrowFade {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-5px);
+                }
+                30% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                60% {
+                    opacity: 0.6;
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateX(5px);
+                }
+            }
         }
     }
 
@@ -166,7 +235,6 @@
             .embla__slide {
                 flex: 0 0 85%;
             }
-
         }
     }
 }
@@ -311,11 +379,11 @@
                     font-size: 1.1rem;
                 }
             }
-            .carousel-btn{
-                &.left{
+            .carousel-btn {
+                &.left {
                     left: -4rem;
                 }
-                &.right{
+                &.right {
                     right: -4rem;
                 }
             }
@@ -365,11 +433,11 @@
                     font-size: 0.9rem;
                 }
             }
-            .carousel-btn{
-                &.left{
+            .carousel-btn {
+                &.left {
                     left: -4rem;
                 }
-                &.right{
+                &.right {
                     right: -4rem;
                 }
             }

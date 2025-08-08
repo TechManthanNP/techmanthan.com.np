@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function FeatureCard({ title, description, delay = 0, image }) {
   const cardStyle = {
     backgroundImage: `
-      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
       url(${image})
     `,
     backgroundSize: "cover",

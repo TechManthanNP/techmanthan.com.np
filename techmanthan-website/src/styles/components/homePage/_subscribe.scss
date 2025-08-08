@@ -57,7 +57,8 @@
         }
 
         button {
-          font-family: $font-inter;
+            font-family: $font-inter;
+            font-weight: 900;
             background-color: #f97316;
             color: rgb(0, 0, 0);
             border: none;
@@ -77,13 +78,13 @@
     }
 }
 @media (max-width: 576px) {
-    .subscribe-section{
-        .subscribe-form{
+    .subscribe-section {
+        .subscribe-form {
             width: 100%;
-            input{
-                max-width: 75%; 
+            input {
+                max-width: 75%;
             }
-            button{
+            button {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
             }
@@ -92,13 +93,13 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-    .subscribe-section{
-        .subscribe-form{
+    .subscribe-section {
+        .subscribe-form {
             width: 100%;
-            input{
-                max-width: 75%; 
+            input {
+                max-width: 75%;
             }
-            button{
+            button {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
             }
@@ -106,13 +107,13 @@
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-    .subscribe-section{
-        .subscribe-form{
+    .subscribe-section {
+        .subscribe-form {
             width: 100%;
-            input{
-                max-width: 75%; 
+            input {
+                max-width: 75%;
             }
-            button{
+            button {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
             }
@@ -120,13 +121,13 @@
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-    .subscribe-section{
-        .subscribe-form{
+    .subscribe-section {
+        .subscribe-form {
             width: 100%;
-            input{
-                max-width: 75%; 
+            input {
+                max-width: 75%;
             }
-            button{
+            button {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
             }
@@ -134,17 +135,16 @@
     }
 }
 @media (min-width: 1200px) {
-    .subscribe-section{
-        .subscribe-form{
+    .subscribe-section {
+        .subscribe-form {
             width: 70%;
-            input{
-                max-width: 75%; 
+            input {
+                max-width: 75%;
             }
-            button{
+            button {
                 padding: 0.5rem 1rem;
                 font-size: 0.9rem;
             }
         }
     }
-
 }

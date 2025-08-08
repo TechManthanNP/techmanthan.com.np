@@ -134,4 +134,17 @@
     }
 }
 @media (min-width: 1200px) {
+    .subscribe-section{
+        .subscribe-form{
+            width: 100%;
+            input{
+                max-width: 75%; 
+            }
+            button{
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
 }

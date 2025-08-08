@@ -4,7 +4,7 @@
     height: 150vh;
     background-color: #000820;
     padding: 114px 7.5rem 132px 7.5rem;
-
+    max-width: 99.1vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -368,7 +368,8 @@
 @media (min-width: 768px) and (max-width: 991px) {
     .product-showcase {
         height: 120vh;
-        width: 100vw;
+        // width: 100vw;
+        max-width: 99.1vw;
         .header {
             max-width: 90%;
             padding: 2px;
@@ -430,7 +431,8 @@
 @media (min-width: 992px) and (max-width: 1199px) {
     .product-showcase {
         height: 130vh;
-        width: 100vw;
+        // width: 100vw;
+        max-width: 99.1vw;
         .header {
             max-width: 90%;
             padding: 2px;
@@ -493,7 +495,8 @@
 @media (min-width: 1200px) {
     .product-showcase {
         height: 130vh;
-        width: 100vw;
+        // width: 100vw;
+        max-width: 99.1vw;
         .header {
             max-width: 90%;
             padding: 2px;

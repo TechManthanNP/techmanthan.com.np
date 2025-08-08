@@ -33,7 +33,7 @@ const Navbar = () => {
       transition={{ duration: 0.3 }}
     >
       <Link href="/" className="navbar__logo">
-      <img src="/images/logo.jpg" alt="" className="logo"/>
+      {/* <img src="/images/logo.jpg" alt="" className="logo"/> */}
         <img src="/images/logo.png" alt="TechManthan Logo"  className="techManthan"/>
       </Link>
 

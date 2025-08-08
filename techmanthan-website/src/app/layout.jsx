@@ -3,7 +3,7 @@ import "../styles/globals.scss";
 
 export const metadata = {
   
-  title: "Tech Manthan",
+  title: "Tech Manthan | AI Products | Impact at Scale",
 };
 
 export default function RootLayout({ children }) {

@@ -1,11 +1,11 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import "../../styles/components/homePage/_contact.scss";
-import { motion } from "framer-motion";
 
 const contactSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -22,28 +22,45 @@ export default function ContactForm() {
     register,
     handleSubmit,
     reset,
+    watch,
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(contactSchema),
   });
 
+  // Watch all fields to make inputs controlled
+  const firstNameValue = watch("firstName");
+  const middleNameValue = watch("middleName");
+  const lastNameValue = watch("lastName");
+  const emailValue = watch("email");
+  const messageValue = watch("message");
+
   const onSubmit = async (data) => {
-    setStatus("Sending...");
+    setStatus(""); // Clear previous status
 
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      });
 
-    if (response.ok) {
-      setStatus("Message sent successfully!");
-      reset();
-    } else {
-      setStatus("Failed to send message. Try again.");
+      if (response.ok) {
+        setStatus("Message submitted successfully!");
+        reset();
+      } else {
+        setStatus("Failed to send message. Try again.");
+      }
+    } catch (err) {
+      setStatus("Something went wrong. Please try again later.");
     }
+  };
+
+  // Helper function to clear status on typing
+  const handleChange = (field, value) => {
+    setStatus("");
+    setValue(field, value);
   };
 
   return (
@@ -58,7 +75,7 @@ export default function ContactForm() {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{  duration: 0.6 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: false }}
       >
         Contact Us
@@ -68,58 +85,85 @@ export default function ContactForm() {
         className="input-group"
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{  duration: 0.6 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: false }}
       >
-        <input type="text" placeholder="First Name" {...register("firstName")} />
-        <input type="text" placeholder="Middle Name" {...register("middleName")} />
+        <input
+          type="text"
+          placeholder="First Name"
+          value={firstNameValue || ""}
+          onChange={(e) => handleChange("firstName", e.target.value)}
+          {...register("firstName")}
+        />
+        <input
+          type="text"
+          placeholder="Middle Name"
+          value={middleNameValue || ""}
+          onChange={(e) => handleChange("middleName", e.target.value)}
+          {...register("middleName")}
+        />
       </motion.div>
-      {errors.firstName && <p className="status-msg error">{errors.firstName.message}</p>}
+      {errors.firstName && (
+        <p className="status-msg error">{errors.firstName.message}</p>
+      )}
 
       <motion.input
         type="text"
         placeholder="Last Name"
+        value={lastNameValue || ""}
+        onChange={(e) => handleChange("lastName", e.target.value)}
         {...register("lastName")}
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: false }}
       />
-      {errors.lastName && <p className="status-msg error">{errors.lastName.message}</p>}
+      {errors.lastName && (
+        <p className="status-msg error">{errors.lastName.message}</p>
+      )}
 
       <motion.input
         type="email"
         placeholder="Email"
+        value={emailValue || ""}
+        onChange={(e) => handleChange("email", e.target.value)}
         {...register("email")}
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: false }}
       />
-      {errors.email && <p className="status-msg error">{errors.email.message}</p>}
+      {errors.email && (
+        <p className="status-msg error">{errors.email.message}</p>
+      )}
 
       <motion.textarea
         placeholder="Your message"
+        value={messageValue || ""}
+        onChange={(e) => handleChange("message", e.target.value)}
         {...register("message")}
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{  duration: 0.6 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: false }}
       />
-      {errors.message && <p className="status-msg error">{errors.message.message}</p>}
+      {errors.message && (
+        <p className="status-msg error">{errors.message.message}</p>
+      )}
 
       <motion.button
         type="submit"
         disabled={isSubmitting}
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{  duration: 0.5 }}
+        transition={{ duration: 0.5 }}
         viewport={{ once: false }}
       >
-        {isSubmitting ? "Sending..." : "Submit"}
+        {isSubmitting ? "Submitting..." : "Submit"}
       </motion.button>
 
-      {status && (
+      {/* Status message below input fields */}
+      {!isSubmitting && status && (
         <motion.p
           className={`status-msg ${
             status.includes("successfully") ? "success" : "error"

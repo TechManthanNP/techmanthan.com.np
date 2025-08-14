@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TechManthan Official Website
 
-## Getting Started
+Welcome to the official website repository for **TechManthan**, a platform showcasing our projects, team, and vision.
 
-First, run the development server:
+---
+
+## 🚀 Project Overview
+
+This project is the **official website of TechManthan**, built with:
+
+- **Next.js**
+- **Sass (SCSS)**
+
+The website features multiple pages such as Home, About Us, ARC, and more, all designed to be responsive and user-friendly.
+
+---
+
+## 🛠 Getting Started
+
+To run the project locally:
+
+### 1️⃣ Clone and Install
+
+```bash
+git clone https://gitlab.com/tech-manthan-nepal/techmanthan-website.git
+cd techmanthan-website
+npm install
+npm run dev
+```
+
+### 2️⃣ Environment Setup
+
+We use environment variables for sensitive configurations such as email sending (Contact Form & Newsletter Subscription).
+
+A sample configuration is provided in `.env.example`.  
+To set up your environment:
+
+1. Duplicate `.env.example` and rename it to `.env.local`
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+2. Open `.env.local` and update the variables with your own credentials:
+
+   ```env
+   # Email Configuration for Contact Form & Subscription
+
+   # Your Gmail address (or SMTP-compatible email address)
+   EMAIL_USER=your_email@gmail.com
+
+   # Gmail App Password or SMTP password
+   EMAIL_PASS=your_app_password
+   ```
+
+**Note:**
+
+- If using Gmail, you must enable **2-Step Verification** and generate an **App Password** (regular password will not work).
+- For other email providers, ensure they support SMTP and update the `nodemailer` config accordingly.
+
+---
+
+### 3️⃣ Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then visit: `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧱 Technologies Used
 
-## Learn More
+- Next.js
+- React
+- Sass (SCSS)
+- React Icons
+- Framer Motion (animations)
+- Zod + React Hook Form (form validation)
+- Nodemailer (email sending)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Server-side rendering
+- Component-based structure
+- Responsive layout
+- Hero section with carousel
+- Flip card team section
+- Reusable Header and Footer
+- Contact Form with email sending
+- Newsletter Subscription with email sending
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+/components   - Reusable components
+/pages        - Page components (Home, About, etc.)
+/styles       - SCSS stylesheets
+/public       - Static assets
+```
+
+## 📈 Project Status
+
+Active development is ongoing.

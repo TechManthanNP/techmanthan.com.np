@@ -1,0 +1,104 @@
+@import "../../abstracts/variables";
+
+.dropus-section {
+  background: white;
+  color: #111;
+  padding: 5rem 2rem;
+
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2rem;
+      span {
+        color: #f97316;
+      }
+    }
+
+    p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: #444;
+    }
+  }
+
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+
+    .contact-form {
+      flex: 1 1 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+
+        &:focus {
+          border: 2px solid #f97316;
+          outline: none;
+          box-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+        }
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      button {
+        align-self: flex-start;
+        background-color: #f97316;
+        color: black;
+        font-weight: 700;
+        padding: 0.9rem 1.5rem;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background: transparent;
+          border: 2px solid black;
+          color: black;
+        }
+      }
+
+      .error {
+        color: red;
+        font-size: 0.9rem;
+      }
+
+      .status {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    .contact-info {
+      flex: 1 1 300px;
+      background: #030b1a;
+      color: white;
+      border-radius: 8px;
+      padding: 2rem;
+
+      h4 {
+        color: #f97316;
+        margin-top: 1rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

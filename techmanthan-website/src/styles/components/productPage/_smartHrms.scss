@@ -3,6 +3,7 @@
     height: 90vh;
     display: flex;
     flex-direction: column;
+    transition: all 2s ease-in-out;
     .top-section-wrapper {
         height: 50%;
         // border: 2px red solid;
@@ -260,7 +261,7 @@
                 width: 85%;
             }
             .image1{
-                bottom: 30%;
+                bottom: 25%;
                 width: 70%;
                 img{
 
@@ -270,7 +271,7 @@
         }
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1000px)and (max-width: 1300px) {
         .top-contents {
             max-width: 65%;
         }
@@ -279,6 +280,18 @@
         }
         .image-wrapper {
             width: 70%;
+            .image2{
+                width: 85%;
+            }
+            .image1{
+                bottom: 40%;
+                width: 55%;
+                img{
+
+                    border-left: 1px #0f172a77 solid;
+                }
+            }
+            
         }
     }
 
@@ -290,7 +303,7 @@
             padding: 0rem 5rem;
         }
         .image-wrapper {
-            width: 65%;
+            width: 70%;
         }
     }
 }

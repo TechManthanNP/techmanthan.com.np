@@ -1,0 +1,67 @@
+@import "../../abstracts/variables";
+
+.lifeTM-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:white ;
+    // padding: 20px;
+
+    .lifeTM-heading {
+        margin-top: 1rem;
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+            font-size: 3rem;
+            font-family: $font-space-grotesk;
+            font-weight: 400;
+
+            span {
+                font-weight: 900;
+            }
+
+            .life {
+                color: #F17006;
+            }
+
+            .atT {
+                color: black;
+                font-weight: 900;
+                margin-left: 0.4rem;
+            }
+        }
+
+        p {
+            font-family: $font-inter;
+            font-size: 1.5rem;
+        }
+    }
+
+    .gallery {
+        margin-top: 3rem;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+
+        .gallery-track {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        img {
+            height: 20rem;
+            width: auto;
+            border-radius: 18px;
+            flex-shrink: 0;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

@@ -59,7 +59,10 @@ export default function OurTeam() {
         ref={sectionRef}
         className={`ourTeamSection ${isVisible ? "animate" : ""}`}
       >
-        <h4 className="teamTitle">Our Team</h4>
+        <h4 className="teamTitle">Our <span> 
+        Team
+          </span> 
+        </h4>
         <h2 className="teamSubtitle">
           Meet the passionate individuals driving our success, blending
           innovation with dedication to create impactful experiences.

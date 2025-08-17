@@ -58,11 +58,11 @@ const Differentiators = () => {
         ref={titleRef}
         className={`heading ${titleVisible ? "animate" : ""}`}
       >
-        <h4>WHAT MAKES US DIFFERENT</h4>
-        <h2>
+        <h1>Our <span>Values</span> & <span>Cultures</span></h1>
+        {/* <h2>
           Our focus on these key differentiators allows us to consistently
           provide exceptional value to our clients.
-        </h2>
+        </h2> */}
       </div>
       <div className="card-grid">
         {cards.map((card, index) => (

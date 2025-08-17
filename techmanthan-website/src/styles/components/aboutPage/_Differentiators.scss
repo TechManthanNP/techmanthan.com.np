@@ -1,56 +1,65 @@
+@import "../../abstracts/variables";
+
+
 .differentiators-section {
-  padding: 6.5rem 13rem;
+  // padding: 6.5rem 13rem;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #1e293b;
   text-align: center;
-  background-color: #fff;
+  background-color: #0f172a;
 
   .heading {
     max-width: 800px;
-    margin: 0 auto 7rem;
+    margin: 0 auto 5rem;
     opacity: 0;
     transform: translateY(40px);
     transition: all 3s ease;
+    // border: 3px red solid;
 
     &.animate {
       opacity: 1;
       transform: translateY(0);
     }
 
-    h4 {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      font-family: "Hanken Grotesk", sans-serif;
-      color: #0f172a;
+    h1 {
+      font-size: 2.5rem;
+      // margin-bottom: 1rem;
+      font-family: $font-space-grotesk;
+      color: #f5f8ff;
       text-transform: uppercase;
       letter-spacing: 1px;
+      span{
+        color: #ef6f06;
+      }
     }
 
-    h2 {
-      font-size: 1.8rem;
-      line-height: 1.5;
-      font-family: "Hanken Grotesk", sans-serif;
-      color: #1e293b;
-    }
+
   }
 
   .card-grid {
+    // border: 2px red solid;
+    max-width: 95%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
-    margin-top: 4rem;
+    // margin-top: 0rem;
   }
 
   .card {
     background: linear-gradient(to top, #0a0f1e, #0f172a, #1e293b);
     border: 1px solid #1e293b;
     padding: 3rem 2.5rem;
-    border-radius: 1rem;
+    border-radius: 5rem 0 5rem 0;
     transition: all 0.4s ease;
     text-align: left;
     position: relative;
     overflow: hidden;
-    height: 380px;
+    height: 30rem;
     box-shadow: 0 0 0 transparent;
 
     .icon {
@@ -97,13 +106,13 @@
     }
 
     h3 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-bottom: 0.85rem;
       color: #fff;
     }
 
     p {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       color: #ccc;
       line-height: 1.75;
     }

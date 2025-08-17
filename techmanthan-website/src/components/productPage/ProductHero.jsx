@@ -17,7 +17,7 @@ const ProductHero = () => {
     <section className="hero-wrapper">
       <div className="background">
         <motion.img
-          src="/images/product-hero.gif"
+          src="/images/products/product-hero.gif"
           alt="hero"
           initial={{ scale: 1.2, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}

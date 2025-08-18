@@ -1,5 +1,5 @@
 @import "../../abstracts/variables";
-.smartHrms-wrapper {
+.skillMentor-wrapper {
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     .top-section-wrapper {
         height: 50%;
         // border: 2px red solid;
-        background: linear-gradient(45deg, #c8a700, #c92c00);
+        background: linear-gradient(to bottom, #37bf5b, #b29fff);
         .top-contents {
             width: 65%;
             // border: 2px red solid;
@@ -19,15 +19,20 @@
                 margin-bottom: 1rem;
             }
             .tags {
-                // border: 2px red solid;
-                width: fit-content;
-                padding: 0.5rem 2rem;
-                border-radius: 20px;
-                font-family: $font-inter;
-                color: rgb(51, 50, 50);
-                background-color: rgb(226, 232, 236);
-                margin-bottom: 1rem;
-                margin-left: 2rem;
+                display: flex;
+                h3 {
+                    // border: 2px red solid;
+                    width: fit-content;
+                    padding: 0.5rem 2rem;
+                    border-radius: 20px;
+                    font-family: $font-inter;
+                    font-size: 1rem;
+                    font-weight: 200;
+                    color: rgb(51, 50, 50);
+                    background-color: rgb(226, 232, 236);
+                    margin-bottom: 1rem;
+                    margin-left: 2rem;
+                }
             }
             ul {
                 display: flex;
@@ -44,9 +49,9 @@
     }
     position: relative;
     .bottom-section-wrapper {
-        background-color: white;
         height: 50%;
         padding: 0rem 5rem;
+        background-color: white;
         .contents {
             display: flex;
             flex-direction: column;
@@ -73,33 +78,16 @@
                     .bar {
                         color: rgb(141, 24, 24);
                     }
-                    .gear {
-                        color: rgb(114, 99, 99);
+                    .leaf {
+                        color: rgb(43, 126, 10);
                     }
                     .brain {
                         color: rgb(223, 105, 105);
                     }
-                    .lock-key-wrapper {
-                        position: relative;
-                        display: inline-block;
-                        width: 24px; /* enough to contain both icons */
-                        height: 20px;
-                        margin-right: 8px; /* spacing from text */
-                    }
-
-                    .lock {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        color: rgb(104, 58, 16);
-                    }
-
-                    .key {
-                        position: absolute;
-                        top: 6px;
-                        left: 12px;
-                        color: rgb(238, 161, 18);
-                        transform: rotate(-20deg);
+                    .cloud {
+                        // border: 2px red solid;
+                        color: rgb(255, 255, 255);
+                        filter: drop-shadow(0 2px 2px rgb(0, 0, 0));
                     }
                 }
             }
@@ -198,7 +186,12 @@
                     font-size: 1.8rem;
                 }
                 .tags{
-                    font-size: 0.7rem;
+                    gap: 0.3rem;
+                    h3{
+                        margin-left: 0rem;
+                        // width: 10rem;
+                        font-size: 0.65rem;
+                    }
                 }
                 ul {
                     gap: 0.3rem;
@@ -210,8 +203,8 @@
         }
         .bottom-section-wrapper{
             .contents{
-                width: 100%;
                 padding: 3rem 0rem;
+                width: 100%;
                 gap: 1.4rem;
                 h2{
                     font-size: 1.5rem;
@@ -269,10 +262,11 @@
                 }
             }
         }
-        .image-wrapper {
+        .image-wrapper{
             display: none;
         }
     }
+
     @media (min-width: 700px) and (max-width: 1000px) {
         .top-section-wrapper {
             .top-contents {
@@ -284,8 +278,10 @@
             }
         }
         .bottom-section-wrapper {
-            .contents {
+            .contents{
+
                 gap: 3rem;
+                // padding: 2rem 3rem;
                 padding: 3.5rem 0rem;
                 // align-items: center;
                 h2 {
@@ -313,8 +309,9 @@
             max-width: 65%;
         }
         .bottom-section-wrapper {
-            .contents {
+            .contents{
                 padding: 3rem 0rem;
+                // padding: 0rem 5rem;
             }
         }
         .image-wrapper {
@@ -337,7 +334,9 @@
             max-width: 60%;
         }
         .bottom-section-wrapper {
-            .contents {
+            .contents{
+
+                // padding: 0rem 5rem;
                 padding: 3rem 5rem;
             }
         }

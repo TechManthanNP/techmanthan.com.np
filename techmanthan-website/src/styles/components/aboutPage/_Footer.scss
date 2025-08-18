@@ -92,35 +92,24 @@
         }
     }
 }
-@media (max-width: 576px) {
-    .footer{
-        .footer-top{
-            gap: 2rem;
-            flex-direction: row;
+
+@media (max-width:806px){
+    .footer {
+        .footer-top {
             justify-content: space-between;
-            .footer-column{
-                text-align: center;
-                flex:none;
-                h4{
-                    font-size: 1rem;
-                }
-                ul{
-                    font-size: 0.8rem;
-                }
-            }
-            .footer-column:last-child {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                justify-content: flex-end;
-            }
+            flex-wrap: nowrap;
+          .footer-column:nth-child(2), 
+          .footer-column:nth-child(3) { 
+            display: none;
+          }
         }
-    }
+      }
 }
-@media (min-width: 576px) and (max-width: 767px) {
+
+@media(max-width: 992px) {
     .footer{
         .footer-top{
-            gap: 2rem;
+            gap: 1rem;
             flex-direction: row;
             justify-content: space-between;
             .footer-column{
@@ -132,19 +121,12 @@
                 ul{
                     font-size: 0.8rem;
                 }
-            }
-            .footer-column:last-child {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                justify-content: flex-end;
+               
             }
         }
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-}
 @media (min-width: 992px) and (max-width: 1199px) {
     .footer{
         .footer-top{
@@ -170,5 +152,28 @@
         }
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1480px) {
+    .footer{
+        .footer-top{
+            gap: 2rem;
+            flex-direction: row;
+            justify-content: space-between;
+            .footer-column{
+                text-align: center;
+                flex:none;
+                h4{
+                    font-size: 1rem;
+                }
+                ul{
+                    font-size: 0.8rem;
+                }
+            }
+            .footer-column:last-child {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                // justify-content: flex-end;
+            }
+        }
+    }
 }

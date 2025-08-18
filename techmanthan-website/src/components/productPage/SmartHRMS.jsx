@@ -58,76 +58,73 @@ const SmartHRMS = () => {
 
       {/* Bottom Section */}
       <div className="bottom-section-wrapper">
-        <motion.h2
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          Key Features
-        </motion.h2>
-
-        <ul>
-          <motion.li
+        <div className="contents">
+          <motion.h2
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
           >
-            <FaChartBar className="icon bar" size={20} /> AI-Powered Workforce Insights
-          </motion.li>
-
-          <motion.li
+            Key Features
+          </motion.h2>
+          <ul>
+            <motion.li
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <FaChartBar className="icon bar" size={20} /> AI-Powered Workforce Insights
+            </motion.li>
+            <motion.li
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <FaGear className="icon gear" size={20} /> Secure & Scalable
+            </motion.li>
+            <motion.li
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <FaBrain className="icon brain" size={20} /> Talent Optimization
+            </motion.li>
+            <motion.li
+              className="lock-key-item"
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <span className="lock-key-wrapper">
+                <FaLock className="icon lock" size={20} />
+                <FaKey className="icon key" size={15} />
+              </span>
+              Smart Automation
+            </motion.li>
+          </ul>
+          <motion.a
+            href="/products"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
           >
-            <FaGear className="icon gear" size={20} /> Secure & Scalable
-          </motion.li>
-
-          <motion.li
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <FaBrain className="icon brain" size={20} /> Talent Optimization
-          </motion.li>
-
-          <motion.li
-            className="lock-key-item"
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-          >
-            <span className="lock-key-wrapper">
-              <FaLock className="icon lock" size={20} />
-              <FaKey className="icon key" size={15} />
-            </span>
-            Smart Automation
-          </motion.li>
-        </ul>
-
-        <motion.a
-          href="/products"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          <motion.button
-            className="demo-btn"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            variants={fadeUp}
-          >
-            <span className="btn-text">Book a Demo</span>
-            <FaPaperPlane className="plane" />
-          </motion.button>
-        </motion.a>
-      </div>
+            <motion.button
+              className="demo-btn"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              variants={fadeUp}
+            >
+              <span className="btn-text">Book a Demo</span>
+              <FaPaperPlane className="plane" />
+            </motion.button>
+          </motion.a>
+                </div>
+        </div>
 
       {/* Images */}
       <div className="image-wrapper">

@@ -1,5 +1,5 @@
 @import "../../abstracts/variables";
-.smartHrms-wrapper {
+.fiscalMind-wrapper {
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     .top-section-wrapper {
         height: 50%;
         // border: 2px red solid;
-        background: linear-gradient(45deg, #c8a700, #c92c00);
+        background: linear-gradient(45deg, #4d79fd, #9f1d3b);
         .top-contents {
             width: 65%;
             // border: 2px red solid;
@@ -44,8 +44,9 @@
     }
     position: relative;
     .bottom-section-wrapper {
-        background-color: white;
         height: 50%;
+        background-color: white;
+
         padding: 0rem 5rem;
         .contents {
             display: flex;
@@ -70,36 +71,17 @@
                     .icon {
                         margin-right: 1rem;
                     }
-                    .bar {
+                    .chart {
                         color: rgb(141, 24, 24);
                     }
-                    .gear {
-                        color: rgb(114, 99, 99);
+                    .scroll {
+                        color: rgb(156, 105, 28);
                     }
-                    .brain {
-                        color: rgb(223, 105, 105);
+                    .work {
+                        color: rgb(97, 26, 4);
                     }
-                    .lock-key-wrapper {
-                        position: relative;
-                        display: inline-block;
-                        width: 24px; /* enough to contain both icons */
-                        height: 20px;
-                        margin-right: 8px; /* spacing from text */
-                    }
-
-                    .lock {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        color: rgb(104, 58, 16);
-                    }
-
-                    .key {
-                        position: absolute;
-                        top: 6px;
-                        left: 12px;
-                        color: rgb(238, 161, 18);
-                        transform: rotate(-20deg);
+                    .search {
+                        color: rgb(21, 20, 70);
                     }
                 }
             }
@@ -162,7 +144,7 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 75%;
+            width: 80%;
             height: auto;
             z-index: 2;
             img {
@@ -172,9 +154,9 @@
 
         .image1 {
             position: absolute;
-            bottom: 50%;
+            bottom: 40%;
             right: 0;
-            width: 50%;
+            width: 40%;
             height: auto;
             z-index: 1;
             img {
@@ -189,7 +171,8 @@
             height: auto;
         }
     }
-    @media (max-width: 470px) {
+
+ @media (max-width: 470px) {
         .top-section-wrapper {
             padding: 0rem;
             .top-contents {
@@ -210,8 +193,8 @@
         }
         .bottom-section-wrapper{
             .contents{
-                width: 100%;
                 padding: 3rem 0rem;
+                width: 100%;
                 gap: 1.4rem;
                 h2{
                     font-size: 1.5rem;
@@ -253,6 +236,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background-color: white;
             .contents {
                 padding: 1rem 2rem;
                 gap: 2.5rem;
@@ -273,6 +257,7 @@
             display: none;
         }
     }
+
     @media (min-width: 700px) and (max-width: 1000px) {
         .top-section-wrapper {
             .top-contents {
@@ -284,7 +269,8 @@
             }
         }
         .bottom-section-wrapper {
-            .contents {
+            .contents{
+
                 gap: 3rem;
                 padding: 3.5rem 0rem;
                 // align-items: center;
@@ -313,7 +299,8 @@
             max-width: 65%;
         }
         .bottom-section-wrapper {
-            .contents {
+            .contents{
+
                 padding: 3rem 0rem;
             }
         }
@@ -337,7 +324,7 @@
             max-width: 60%;
         }
         .bottom-section-wrapper {
-            .contents {
+            .contents{
                 padding: 3rem 5rem;
             }
         }

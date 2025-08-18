@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import { motion } from "framer-motion";
 import "../../styles/components/productPage/_productHero.scss";
@@ -15,16 +15,27 @@ const textVariants = {
 const ProductHero = () => {
   return (
     <section className="hero-wrapper">
-      <div className="background">
+      {/* <div className="background">
         <motion.img
           src="/images/products/product-hero.gif"
           alt="hero"
-          initial={{ scale: 1.2, opacity: 0 }}
+          initial={{ scale: 1.2, opacity: 0.5 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         />
         <div className="overlay"></div>
+      </div> */}
+      <div className="background">
+        <motion.img
+          src="/images/products/product-hero.gif"
+          alt="hero"
+          initial={{ scale: 1.2, filter: "brightness(0.1)" }}
+          animate={{ scale: 1, filter: "brightness(0.3)" }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        />
+        <div className="overlay"></div>
       </div>
+
 
       <motion.div
         className="hero-content"

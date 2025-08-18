@@ -1,0 +1,97 @@
+.subscribe-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 4rem 8rem;
+  background: #001034; // dark background like screenshot
+  color: #fff;
+
+  .map-container {
+    flex: 0 0 40%;
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 6px;
+    }
+  }
+
+  .form-container {
+    flex: 0 0 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subscribe-form {
+      display: flex;
+      gap: 1rem;
+
+      input {
+        flex: 1;
+        padding: 0.8rem 1rem;
+        border-radius: 4px;
+        border: none;
+        font-size: 1rem;
+      }
+
+      button {
+        background: #f17006;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 0.8rem 1.5rem;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.3s;
+
+        &:hover {
+          background: #d65d05;
+        }
+      }
+    }
+
+    .status-msg {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+
+      &.error {
+        color: #ff5a5a;
+      }
+      &.success {
+        color: #3ecf8e;
+      }
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 2rem;
+
+    .map-container,
+    .form-container {
+      flex: 0 0 100%;
+    }
+
+    .subscribe-form {
+      flex-direction: column;
+
+      input,
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

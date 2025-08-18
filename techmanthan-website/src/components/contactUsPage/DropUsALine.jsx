@@ -7,6 +7,7 @@ import DropUsForm from "./DropUsForm";
 export default function DropUsALine() {
   return (
     <section id="contact" className="dropus-section">
+      {/* Header */}
       <motion.div
         className="header"
         initial={{ opacity: 0, y: -20 }}
@@ -22,17 +23,27 @@ export default function DropUsALine() {
         </p>
       </motion.div>
 
-      <div className="form-container">
+      {/* Form + Info */}
+      <div className="dropus-box">
         {/* Left side → form */}
-        <DropUsForm />
+        <div className="form-side">
+          <h3>
+            Have questions? Ideas?
+            <br />
+            <span>Let’s talk</span> — we’re just a click away.
+          </h3>
+          <DropUsForm />
+        </div>
 
         {/* Right side → info */}
-        <div className="contact-info">
-          <h4>Talk In Person? Visit Us</h4>
+        <div className="info-side">
+          <h3>Talk In Person? Visit Us</h3>
           <p>Bhaktapur-02, Nepal</p>
-          <h4>Give Us a Call</h4>
-          <p>+977 9701083225</p>
-          <h4>Get More Information at</h4>
+
+          <h3>Give Us a Call</h3>
+          <p>+977 9701039325</p>
+
+          <h3>Get More Information at</h3>
           <p>techmanthan.info@gmail.com</p>
         </div>
       </div>

@@ -68,7 +68,7 @@ export default function SubscribeSection() {
       <div className="map-container">
         {/* Google Maps Embed (you can replace src with your address) */}
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18..."
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.307655782168!2d85.4204566754663!3d27.676884576200106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b005fb2e85b%3A0x9b84689a66b991bc!2sTech%20Manthan!5e0!3m2!1sen!2snp!4v1754499998119!5m2!1sen!2snp"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
@@ -76,9 +76,8 @@ export default function SubscribeSection() {
 
       <div className="form-container">
         <motion.h2 variants={childVariants}>
-          Subscribe to Our Newsletter
+          Subscribe to Our Newsletter,Stay a Step Ahead
         </motion.h2>
-        <motion.p variants={childVariants}>Stay a Step Ahead</motion.p>
 
         <motion.form
           className="subscribe-form"

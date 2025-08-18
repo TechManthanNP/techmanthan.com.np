@@ -1,0 +1,132 @@
+@import "../../abstracts/variables";
+
+.job-arc-section {
+  display: flex;
+  align-items: center; // keeps image vertically centered
+  justify-content: space-between;
+  gap: 4rem;
+  color: #000000;
+  padding: 5.5rem 10rem;
+
+  // TEXT CONTENT
+  .text-content {
+    flex: 0 0 70%; // fixed to 70%
+    display: flex;
+    flex-direction: column;
+    gap: 4.75rem;
+  }
+
+  .job-section,
+  .arc-section {
+    text-align: left;
+
+    .header {
+      margin-bottom: 1.75rem;
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+
+        span {
+          color: #f17006;
+        }
+      }
+
+      p {
+        margin-top: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-family: $font-inter;
+        color: #000000;
+
+        &:not(:last-child) {
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+
+    .apply-button {
+      background-color: #ffffff;
+      color: #2f1b0b;
+      font-family: $font-inter;
+      font-weight: 400;
+      padding: 0.6rem 1.5rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #f17006;
+        color: #fff;
+      }
+    }
+  }
+
+  // IMAGE CONTENT
+  .image-section {
+    flex: 0 0 30%; // fixed to 30%
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%; // takes full available width
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+  }
+
+  /* -------------------
+     RESPONSIVE STYLES
+  ------------------- */
+  @media (max-width: 1800px) {
+    padding: 4rem 6rem;
+    gap: 3rem;
+
+    .text-content {
+      flex: 0 0 55%;
+    }
+    .image-section {
+      flex: 0 0 45%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    padding: 3rem 4rem;
+
+    .text-content,
+    .image-section {
+      flex: 0 0 100%;
+    }
+
+    .image-section {
+      margin-top: 2rem;
+
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 2rem;
+
+    .job-section .header h2,
+    .arc-section .header h2 {
+      font-size: 1.5rem;
+    }
+
+    .job-section .header p,
+    .arc-section .header p {
+      font-size: 1rem;
+    }
+
+    .image-section img {
+      max-width: 100%;
+    }
+  }
+}

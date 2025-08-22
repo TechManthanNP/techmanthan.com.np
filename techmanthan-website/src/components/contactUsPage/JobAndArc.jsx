@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import "../../styles/components/contactUspage/_jobAndARCSection.scss";
+import "../../styles/components/contactUsPage/_jobAndARCSection.scss";
 
 export default function JobAndARCSection() {
   const textRef = useRef(null);

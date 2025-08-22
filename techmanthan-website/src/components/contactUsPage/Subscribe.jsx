@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import "../../styles/components/contactUspage/_subscribe.scss";
+import "../../styles/components/contactUsPage/_subscribe.scss";
 
 // Animations
 const containerVariants = {

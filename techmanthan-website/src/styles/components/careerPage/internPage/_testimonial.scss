@@ -1,0 +1,98 @@
+@import "../../../abstracts/variables";
+
+.testimonials {
+  text-align: center;
+  padding: 3rem 2rem; // smaller padding for smaller screens
+  background: #f4f5f7;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #000820;
+
+    @media (min-width: 768px) {
+      font-size: 2.3rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+      gap: 2rem;
+    }
+
+    @media (min-width: 1200px) {
+      gap: 30px;
+    }
+  }
+
+  .testimonial-card {
+    position: relative;
+    background: #fff;
+    padding: 1.5rem 1.8rem 3rem 1.8rem;
+    border-radius: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 350px; // responsive card width
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-top: 2rem;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .image {
+      position: absolute;
+      top: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .profile-img {
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #000820;
+      font-family: $font-inter;
+      margin-top: 3rem; // spacing below image
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: #000000;
+      margin: 0.3rem 0;
+    }
+
+    .batch {
+      font-size: 0.8rem;
+      color: #f17006;
+      margin-bottom: 1rem;
+    }
+
+    .desc {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      font-weight: 500;
+      color: #000000;
+      text-align: left;
+    }
+  }
+}

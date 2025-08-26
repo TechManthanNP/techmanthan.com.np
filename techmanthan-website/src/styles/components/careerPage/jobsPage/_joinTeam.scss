@@ -1,0 +1,115 @@
+@import "../../../abstracts/variables";
+
+.join-team-section {
+  background: #f8f8f8;
+  padding: 2rem 1.5rem; // mobile default
+  text-align: center;
+
+  .content {
+    max-width: 1720px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 1.75rem; // mobile size
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+
+      .highlight {
+        color: #f17006;
+      }
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 1.85rem;
+      font-family: $font-inter;
+    }
+
+    .cv-btn {
+      background: #f17006;
+      color: #2f1b0b;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background: #d95c00;
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .join-team-section {
+    padding: 3rem 4rem;
+
+    .content {
+      h2 {
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .cv-btn {
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+  .join-team-section {
+    padding: 4rem 6rem;
+
+    .content {
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.05rem;
+        margin-bottom: 3rem;
+      }
+
+      .cv-btn {
+        padding: 1.2rem 3.5rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .join-team-section {
+    padding: 4rem 8rem;
+
+    .content {
+      h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 5rem;
+      }
+
+      .cv-btn {
+        padding: 2rem 6rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

@@ -11,7 +11,8 @@ const navLinks = [
   { label: "AI Products", href: "/products" },
   { label: "Solutions", href: "/service" },
   { label: "About Us", href: "/about" },
-  { label: "Careers", href: "/arc" },
+  // { label: "Careers", href: "/arc" },
+  { label: "Careers", href: "/career" },
 ];
 
 const Navbar = () => {
@@ -33,8 +34,12 @@ const Navbar = () => {
       transition={{ duration: 0.3 }}
     >
       <Link href="/" className="navbar__logo">
-      {/* <img src="/images/logo.jpg" alt="" className="logo"/> */}
-        <img src="/images/logo.png" alt="TechManthan Logo"  className="techManthan"/>
+        {/* <img src="/images/logo.jpg" alt="" className="logo"/> */}
+        <img
+          src="/images/logo.png"
+          alt="TechManthan Logo"
+          className="techManthan"
+        />
       </Link>
 
       {/* Desktop Nav */}

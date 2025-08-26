@@ -1,0 +1,67 @@
+.career-tabs {
+  display: flex;
+  justify-content: center;
+  background: #000820;
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.7rem 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-width: 1px 1px 1px 0px;
+    border-style: solid;
+    border-color: #414141;
+
+    &.active {
+      background: #d5d5d5;
+      color: #000000;
+      border-width: 1px 0px 1px 1px;
+      border-style: solid;
+      border-color: #d5d5d5;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+      border: none;
+    }
+  }
+
+  /* Tablet (≥768px) */
+  @media (min-width: 768px) {
+    .tab {
+      font-size: 1.1rem;
+      padding: 1rem 0;
+    }
+  }
+
+  /* Desktop (≥1200px) */
+  @media (min-width: 1200px) {
+    .tab {
+      font-size: 1.3rem;
+      padding: 1.2rem 0;
+    }
+  }
+
+  /* Large desktops (≥1600px) */
+  @media (min-width: 1600px) {
+    .tab {
+      font-size: 1.5rem;
+      padding: 1.4rem 0;
+    }
+  }
+
+  /* Ultra-wide screens (≥1920px) */
+  @media (min-width: 1920px) {
+    .tab {
+      font-size: 1.7rem;
+      padding: 1.6rem 0;
+    }
+  }
+}

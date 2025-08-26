@@ -1,0 +1,299 @@
+@import "../../../abstracts/variables";
+
+.arc-program {
+  padding: 2rem 1.25rem; // mobile default
+
+  .intro {
+    display: flex;
+    flex-direction: column; // stack on mobile
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    .text {
+      flex: 1;
+
+      h2 {
+        font-size: 1.5rem; // mobile
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-family: $font-inter;
+
+        .highlight {
+          color: #f17006;
+        }
+      }
+
+      p {
+        font-family: $font-inter;
+        font-size: 1rem;
+        color: #000000;
+        text-align: justify;
+      }
+    }
+
+    .image {
+      flex: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+      }
+    }
+  }
+
+  .program-list {
+    display: flex;
+    flex-direction: column;
+
+    .program-card {
+      display: flex;
+      flex-direction: column; // stacked on mobile
+      gap: 2rem;
+      padding: 2rem 0;
+
+      &.reverse {
+        flex-direction: column;
+      }
+
+      .image {
+        flex: 1;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-top-left-radius: 40px;
+          border-bottom-right-radius: 40px;
+        }
+      }
+
+      .text {
+        flex: 1;
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          font-family: $font-inter;
+          text-align: center;
+          color: #f17006;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #000000;
+          font-family: $font-inter;
+          text-align: justify;
+        }
+
+        .join-btn {
+          margin-top: 2rem;
+          padding: 0.75rem 1.5rem;
+          background: #f17006;
+          color: #2f1b0b;
+          border: none;
+          border-radius: 4px;
+          font-weight: 700;
+          cursor: pointer;
+          transition: 0.3s ease;
+          font-family: $font-inter;
+          font-size: 1rem;
+
+          &:hover {
+            background: darken(#f17006, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tablet (≥768px) */
+@media (min-width: 768px) {
+  .arc-program {
+    padding: 4rem 3rem;
+
+    .intro {
+      flex-direction: row;
+      gap: 3rem;
+
+      .text h2 {
+        font-size: 2rem;
+      }
+
+      .text p {
+        font-size: 1.125rem;
+      }
+
+      .image img {
+        border-top-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+      }
+    }
+
+    .program-list .program-card {
+      flex-direction: row;
+      gap: 3rem;
+      align-items: center;
+
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .text h3 {
+        font-size: 2rem;
+      }
+
+      .text p {
+        font-size: 1.125rem;
+      }
+
+      .join-btn {
+        font-size: 1.125rem;
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+
+/* Desktop (≥1200px) */
+@media (min-width: 1200px) {
+  .arc-program {
+    padding: 6rem 8rem;
+
+    .intro {
+      gap: 4rem;
+      margin-bottom: 3rem;
+
+      .text {
+        flex: 0 0 65%;
+
+        h2 {
+          font-size: 2.25rem;
+        }
+
+        p {
+          font-size: 1.25rem;
+        }
+      }
+
+      .image {
+        flex: 0 0 30%;
+
+        img {
+          border-top-left-radius: 70px;
+          border-bottom-right-radius: 70px;
+        }
+      }
+    }
+
+    .program-list .program-card {
+      gap: 5rem;
+      padding: 2.25rem 0;
+
+      .text {
+        flex: 0 0 65%;
+
+        h3 {
+          font-size: 2.25rem;
+        }
+
+        p {
+          font-size: 1.25rem;
+        }
+
+        .join-btn {
+          margin-top: 4rem;
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+}
+
+/* Large Desktop (≥1440px) */
+@media (min-width: 1440px) {
+  .arc-program {
+    padding: 7rem 10rem;
+
+    .intro {
+      gap: 5rem;
+      margin-bottom: 3.5rem;
+
+      .text h2 {
+        font-size: 2.35rem;
+      }
+
+      .text p {
+        font-size: 1.3rem;
+      }
+    }
+
+    .program-list .program-card {
+      gap: 6rem;
+
+      .text h3 {
+        font-size: 2.35rem;
+      }
+
+      .text p {
+        font-size: 1.3rem;
+      }
+
+      .join-btn {
+        font-size: 1.2rem;
+        margin-top: 4.5rem;
+      }
+    }
+  }
+}
+
+/* Extra Large Desktop (≥1920px) */
+@media (min-width: 1920px) {
+  .arc-program {
+    padding: 7rem 11rem;
+
+    .intro {
+      gap: 5rem;
+      margin-bottom: 3.5rem;
+
+      .text h2 {
+        font-size: 2.5rem;
+      }
+
+      .text p {
+        font-size: 1.375rem;
+      }
+    }
+
+    .program-list .program-card {
+      gap: 6.5rem;
+
+      .text h3 {
+        font-size: 2.5rem;
+      }
+
+      .text p {
+        font-size: 1.5rem;
+      }
+
+      .join-btn {
+        font-size: 1.25rem;
+        margin-top: 5rem;
+      }
+    }
+  }
+}
+.scroll-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #f17006;
+  transform-origin: 0%;
+  width: 100%;
+  z-index: 50;
+}

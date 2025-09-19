@@ -9,10 +9,9 @@ import "../styles/components/_navbar.scss";
 
 const navLinks = [
   { label: "AI Products", href: "/products" },
-  { label: "Solutions", href: "/service" },
+  { label: "Solutions", href: "/solutions" },
   { label: "About Us", href: "/about" },
-  // { label: "Careers", href: "/arc" },
-  { label: "Careers", href: "/career" },
+  { label: "Careers", href: "/careers" },
 ];
 
 const Navbar = () => {
@@ -34,7 +33,6 @@ const Navbar = () => {
       transition={{ duration: 0.3 }}
     >
       <Link href="/" className="navbar__logo">
-        {/* <img src="/images/logo.jpg" alt="" className="logo"/> */}
         <img
           src="/images/logo.png"
           alt="TechManthan Logo"
@@ -45,7 +43,9 @@ const Navbar = () => {
       {/* Desktop Nav */}
       <ul className="navbar__links">
         {navLinks.map(({ label, href }) => {
-          const isActive = pathname === href;
+          // const isActive = pathname === href;
+          // const isActive = pathname.replace(/\/$/, "") === href;
+          const isActive = pathname.startsWith(href);
           return (
             <li
               key={href}

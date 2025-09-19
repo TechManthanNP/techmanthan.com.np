@@ -30,7 +30,7 @@ export default function DropUsALine() {
           <h3>
             Have questions? Ideas?
             <br />
-            <span>Let’s talk</span> — we’re just a click away.
+            <span>Let’s talk!</span> We’re just a click away.
           </h3>
           <DropUsForm />
         </div>

@@ -1,27 +1,26 @@
-
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
 import { motion, useAnimationFrame } from 'framer-motion';
 
 export default function AnimatedPath({
-  // path = "M 100 200 A 100 100 50 0 0 380 200", //globe
-  // path="M 0 800 C 200 0, 100 500, 600 0",
   path = "M 0 300 C 190 -50, 700 150, 800 0",
   stroke = "rgba(255, 251, 255, 0.3)",
   strokeWidth = 1,
   circleColor = "#f17006",
   circleRadius = 5,
   drawDuration = 0.3,
-  travelDuration = 10,       // total time for circle to go full path
+  travelDuration = 10,
   delay = 0,
-  fadeDuration = 0.5,        // fade out and fade in duration in seconds
-  invisiblePause = 0.5,      // how long circle stays invisible in seconds
+  fadeDuration = 0.5,
+  invisiblePause = 0.5,
 }) {
   const pathRef = useRef(null);
   const [pathLength, setPathLength] = useState(0);
-  const [circlePos, setCirclePos] = useState({ x: 0, y: 0 });
-  const [progress, setProgress] = useState(0.5); // start halfway for visibility
+
+  const circlePosRef = useRef({ x: 0, y: 0 });
+  const progressRef = useRef(0.5); // mutable, not causing re-render
+  const [, forceRender] = useState(0); // small trick: force refresh occasionally
 
   // Initialize path length once
   useEffect(() => {
@@ -30,50 +29,38 @@ export default function AnimatedPath({
     }
   }, []);
 
-  // Animate progress from 1 → 0 looping
+  // Animate progress with useAnimationFrame
   useAnimationFrame((_, delta) => {
-    setProgress(prev => {
-      let next = prev - delta / (travelDuration * 1000);
-      if (next < 0) next += 1;
-      return next;
-    });
+    if (!pathRef.current || pathLength === 0) return;
+
+    progressRef.current -= delta / (travelDuration * 1000);
+    if (progressRef.current < 0) progressRef.current += 1;
+
+    const lengthAtProgress = pathLength * (1 - progressRef.current);
+    const point = pathRef.current.getPointAtLength(lengthAtProgress);
+    circlePosRef.current = { x: point.x, y: point.y };
+
+    // re-render just enough (say every 10 frames)
+    forceRender(t => (t + 1) % 10);
   });
 
-  // Update circle position on path according to progress
-  useEffect(() => {
-    if (!pathRef.current || pathLength === 0) return;
-    const lengthAtProgress = pathLength * (1 - progress);
-    const point = pathRef.current.getPointAtLength(lengthAtProgress);
-    setCirclePos({ x: point.x, y: point.y });
-  }, [progress, pathLength]);
-
-  // Calculate fractions of total travel time
+  // Calculate opacity
   const fadeFrac = fadeDuration / travelDuration;
   const pauseFrac = invisiblePause / travelDuration;
 
-  // Define boundaries on progress timeline (progress goes backward 1→0)
   const fadeOutStart = 1 - (fadeFrac + pauseFrac);
   const pauseStart = 1 - pauseFrac;
   const fadeInEnd = fadeFrac;
 
   let opacity = 1;
+  const progress = progressRef.current;
 
   if (progress >= fadeOutStart && progress <= pauseStart) {
-    // Fade out: opacity from 1 → 0
     opacity = (pauseStart - progress) / fadeFrac;
   } else if (progress > pauseStart || progress < fadeInEnd) {
-    if (progress > pauseStart) {
-      // Invisible pause
-      opacity = 0;
-    } else {
-      // Fade in: opacity from 0 → 1
-      opacity = progress / fadeFrac;
-    }
-  } else {
-    opacity = 1;
+    opacity = progress > pauseStart ? 0 : progress / fadeFrac;
   }
 
-  // Clamp opacity between 0 and 1
   opacity = Math.min(Math.max(opacity, 0), 1);
 
   return (
@@ -102,8 +89,8 @@ export default function AnimatedPath({
         fill={circleColor}
         style={{
           filter: 'blur(1px)',
-          translateX: circlePos.x,
-          translateY: circlePos.y,
+          translateX: circlePosRef.current.x,
+          translateY: circlePosRef.current.y,
           opacity,
         }}
       />

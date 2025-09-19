@@ -1,6 +1,6 @@
 import DropUsALine from "@/components/contactUsPage/DropUsALine";
 import HeroSection from "@/components/contactUsPage/Hero";
-import JobAndARCSection from "@/components/contactUsPage/jobAndArc";
+import JobAndARCSection from "@/components/contactUsPage/JobAndArc";
 import SubscribeSection from "@/components/contactUsPage/Subscribe";
 import Navbar from "@/components/Navbar";
 

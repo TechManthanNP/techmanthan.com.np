@@ -33,7 +33,7 @@
             margin-bottom: 2.2rem;
         }
 
-        p {
+        .points {
             font-feature-settings: $font-inter;
             max-width: 80%;
             .arrow-bullets {
@@ -227,10 +227,6 @@
     @media (max-width: 768px) {
         flex-direction: column;
 
-        .content-left {
-            text-align: center;
-        }
-
         .carousel-wrapper {
             .embla__slide {
                 flex: 0 0 85%;
@@ -238,81 +234,39 @@
         }
     }
 }
-@media (max-width: 576px) {
+@media (max-width: 569px) {
     .enterprise-section {
-        height: 85vh;
+        height: 90vh;
         padding: 0;
-        // flex-direction: column;
         .content-left {
-            max-width: 100%;
-            // border: 2px rgb(157, 255, 0) solid;
+            width: 100vw;
+            // border: 2px red solid;
+            padding: 0;
             align-items: center;
             h4 {
-                font-size: 2.2rem;
+                margin-top: 2rem;
+                font-size: 2rem;
             }
             h2 {
                 font-size: 2.2rem;
                 margin-top: 0.1rem;
-                margin-bottom: 1.2rem;
+                margin-bottom: 1.4rem;
             }
-            p {
-                font-size: 1.2rem;
+            .points {
+                margin-top: 1rem;
+                .arrow-bullets {
+                    li {
+                        font-size: 1.2rem;
+                        text-align: left;
+                    }
+                }
             }
         }
         padding-bottom: 2rem;
         .carousel-wrapper {
             flex: none;
-
-            width: 60%;
-            margin: 0;
-            .embla__container {
-                // gap: 0.5rem;
-                gap: 1rem;
-            }
-            .card {
-                margin-left: 1.5rem;
-                // border: 2px red solid;
-                height: 100%;
-                width: 300px;
-                img {
-                    height: 50%;
-                }
-                h3 {
-                    margin: 1rem;
-                    font-size: 1.1rem;
-                }
-                p {
-                    margin-top: 0;
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
-}
-@media (min-width: 576px) and (max-width: 767px) {
-    .enterprise-section {
-        height: 85vh;
-        padding: 0;
-        .content-left {
-            max-width: 100%;
-            align-items: center;
-            h4 {
-                font-size: 2.2rem;
-            }
-            h2 {
-                font-size: 2.2rem;
-                margin-top: 0.1rem;
-                margin-bottom: 1.2rem;
-            }
-            p {
-                font-size: 1.2rem;
-            }
-        }
-        padding-bottom: 2rem;
-        .carousel-wrapper {
-            flex: none;
-            width: 60%;
-            margin: 0;
+            width: 70%;
+            margin-right: 2rem;
             .embla__container {
                 // gap: 0.5rem;
                 gap: 1rem;
@@ -324,7 +278,7 @@
             }
             .card {
                 margin-left: 3.8rem;
-                height: 100%;
+                height: 90%;
                 width: 300px;
                 img {
                     height: 50%;
@@ -336,6 +290,84 @@
                 p {
                     margin-top: 0;
                     font-size: 1rem;
+                }
+            }
+            .carousel-btn {
+                &.left {
+                    left: -2rem;
+                }
+                &.right {
+                    right: -4rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 570px) and (max-width: 767px) {
+    .enterprise-section {
+        height: 90vh;
+        padding: 0;
+        .content-left {
+            width: 100vw;
+            // border: 2px red solid;
+            padding: 0;
+            align-items: center;
+            h4 {
+                margin-top: 2rem;
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 2.2rem;
+                margin-top: 0.1rem;
+                margin-bottom: 1.4rem;
+            }
+            .points {
+                margin-top: 1rem;
+                .arrow-bullets {
+                    li {
+                        font-size: 1.2rem;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        padding-bottom: 2rem;
+        .carousel-wrapper {
+            flex: none;
+            width: 75%;
+            // border: 2px red solid;
+
+            margin-right: 2rem;
+            .embla__container {
+                gap: 1rem;
+            }
+            .embla__slide {
+                flex: 0 0 100%;
+                min-width: 0;
+                max-width: 450px;
+            }
+            .card {
+                margin-left: 3.8rem;
+                height: 80%;
+                width: 360px;
+                img {
+                    height: 50%;
+                }
+                h3 {
+                    margin: 1rem;
+                    font-size: 1.1rem;
+                }
+                p {
+                    margin-top: 0;
+                    font-size: 1rem;
+                }
+            }
+            .carousel-btn {
+                &.left {
+                    left: -2rem;
+                }
+                &.right {
+                    right: -4rem;
                 }
             }
         }
@@ -355,8 +387,14 @@
                 font-size: 36px;
                 margin-bottom: 2.2rem;
             }
-            p {
-                font-size: 20px;
+            .points {
+                .arrow-bullets {
+                
+                        li {
+                            font-size: 1.2rem;
+                        }
+                    
+                }
             }
         }
         .carousel-wrapper {
@@ -404,7 +442,7 @@
                 font-size: 36px;
                 margin-bottom: 2.2rem;
             }
-            p {
+            .points {
                 font-size: 20px;
             }
         }

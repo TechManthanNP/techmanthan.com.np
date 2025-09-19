@@ -10,17 +10,17 @@ export default function CareerTabs() {
   return (
     <div className="career-tabs">
       <Link
-        href="/career/jobs"
+        href="/careers/jobs"
         className={`tab jobs ${
-          pathname.includes("/career/jobs") ? "active" : ""
+          pathname.includes("/careers/jobs") ? "active" : ""
         }`}
       >
         Jobs
       </Link>
       <Link
-        href="/career/internships"
+        href="/careers/internships"
         className={`tab internships ${
-          pathname.includes("/career/internships") ? "active" : ""
+          pathname.includes("/careers/internships") ? "active" : ""
         }`}
       >
         Internships

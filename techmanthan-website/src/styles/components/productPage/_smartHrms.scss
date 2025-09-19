@@ -154,7 +154,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 70%;
+        width: 65%;
         height: 100%;
         pointer-events: none;
 
@@ -162,7 +162,7 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 75%;
+            width: 65%;
             height: auto;
             z-index: 2;
             img {
@@ -310,7 +310,7 @@
 
     @media (min-width: 1000px) and (max-width: 1440px) {
         .top-contents {
-            max-width: 65%;
+            max-width: 55%;
         }
         .bottom-section-wrapper {
             .contents {
@@ -318,13 +318,13 @@
             }
         }
         .image-wrapper {
-            width: 70%;
+            width: 75%;
             .image2 {
-                width: 85%;
+                width: 65%;
             }
             .image1 {
                 bottom: 40%;
-                width: 55%;
+                width: 50%;
                 img {
                     border-left: 1px #0f172a77 solid;
                 }

@@ -93,7 +93,7 @@ export default function EnterpriseCarousel() {
       >
         <motion.h4 variants={fadeItem}>AI Solutions That Drive</motion.h4>
         <motion.h2 variants={fadeItem}>Business Outcomes</motion.h2>
-        <motion.p variants={fadeItem}>
+        <motion.div className="points" variants={fadeItem}>
           <ul className="arrow-bullets">
             <li>
               <span className="arrow-animation" />
@@ -104,7 +104,7 @@ export default function EnterpriseCarousel() {
               Powered by expert teams and advanced technology.
             </li>
           </ul>
-        </motion.p>
+        </motion.div>
       </motion.div>
 
       <div className="carousel-wrapper">

@@ -1,0 +1,56 @@
+
+@import "../../abstracts/variables";
+
+.mission-section {
+    height: 60vh;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    padding: 2rem;
+
+    .mission-image {
+        flex: 0 0 28%; // fixed width, won't shrink or grow
+        height: 70%;
+        overflow: hidden;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .mission-content {
+        flex: 0 0 50%; 
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            font-family: $font-space-grotesk;
+            span {
+                color: #f17006;
+            }
+        }
+
+        .mission-text-wrapper {
+            min-height: 8rem; 
+            margin-top: 2rem;
+            display: flex;
+            align-items: flex-start;
+    
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1.6rem;
+            // margin-top: 3.5rem;
+            font-family: $font-inter;
+        }
+    }
+}

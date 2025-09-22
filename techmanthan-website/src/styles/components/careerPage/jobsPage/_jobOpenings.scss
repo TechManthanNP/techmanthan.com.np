@@ -1,0 +1,216 @@
+@import "../../../abstracts/variables";
+
+.job-openings {
+  padding: 2rem 1.5rem; // mobile first padding
+
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      font-family: $font-inter;
+
+      .highlight {
+        color: #f17006;
+      }
+    }
+
+    p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #555;
+    }
+  }
+
+  .filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    .search-filter-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      border: 1px solid #d5d5d5;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 0.5rem;
+      background-color: #fff;
+
+      input {
+        padding: 1rem;
+        border: none;
+        font-size: 1rem;
+        font-family: $font-inter;
+
+        &::placeholder {
+          color: #a9a9a9;
+          font-size: 1rem;
+          font-weight: 400;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      select {
+        padding: 1rem;
+        border: none;
+        cursor: pointer;
+        color: #555;
+        background: #fff;
+        font-size: 1rem;
+        font-family: $font-inter;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .job-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    .job-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-family: $font-inter;
+        color: #000;
+      }
+
+      .location,
+      .address {
+        font-size: 1rem;
+        color: #000;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .apply-btn {
+        align-self: flex-start;
+        background: #f17006;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background: #d95c00;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* Border colors */
+    .job {
+      border: 1px solid #d8d8d8;
+      box-shadow: 0px 2px 2px 0px #003e8214;
+    }
+
+    .internship {
+      border: 1px solid #d8d8d8;
+      box-shadow: 0px 2px 2px 0px #003e8214;
+    }
+  }
+
+  .no-results {
+    font-family: $font-inter;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    color: #f17006;
+  }
+
+  /* Tablets (≥768px) */
+  @media (min-width: 768px) {
+    padding: 3rem 3rem;
+
+    .filters .search-filter-wrapper {
+      padding: 0 1rem;
+      flex-direction: row;
+      gap: 0;
+      justify-content: space-between;
+      align-items: center;
+      input {
+        flex: 1;
+      }
+      select {
+        width: 100px;
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        color: #555;
+      }
+    }
+
+    .job-cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  /* Laptops (≥1024px) */
+  @media (min-width: 1024px) {
+    padding: 4rem 6rem;
+
+    .job-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header h2 {
+      font-size: 2rem;
+    }
+
+    .header p {
+      font-size: 1.25rem;
+    }
+
+    .job-card h3 {
+      font-size: 1.5rem;
+    }
+
+    .job-card .location,
+    .job-card .address {
+      font-size: 1.1rem;
+    }
+  }
+
+  /* Large desktops (≥1440px) */
+  @media (min-width: 1440px) {
+    padding: 4rem 8rem;
+
+    .job-cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+  }
+
+  /* Ultra wide screens (≥1917px) */
+  @media (min-width: 1917px) {
+    padding: 4rem 11rem;
+  }
+}

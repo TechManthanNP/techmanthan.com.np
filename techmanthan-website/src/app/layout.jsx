@@ -1,8 +1,9 @@
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import "../styles/globals.scss";
 
 export const metadata = {
-  title: "Tech Manthan",
+  title: "Tech Manthan | AI Products | Impact at Scale",
 };
 
 export default function RootLayout({ children }) {
@@ -13,14 +14,20 @@ export default function RootLayout({ children }) {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
+          crossOrigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:wght@300..800&family=Poppins:wght@100..900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
       </head>
       <body>
+        <Navbar />
         {children}
         <Footer />
       </body>

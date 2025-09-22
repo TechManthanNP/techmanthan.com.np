@@ -1,0 +1,150 @@
+@import "../../abstracts/variables";
+.subscribe-section {
+    background: linear-gradient(to bottom, #1d2d52, #030b1a);
+    border-bottom: 1px rgba(255, 255, 255, 0.199) solid;
+    border-width: 1px;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-family: $font-space-grotesk;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+        // font-family: "hanken-grotesk", sans-serif;
+    }
+
+    p {
+        font-family: $font-inter;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        // font-family: "hanken-grotesk", sans-serif;
+    }
+
+    .subscribe-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // align-items: center;
+        // border: 2px red solid;
+        gap: 1rem;
+        width: 70%;
+
+        input {
+            padding: 0.9rem 1rem;
+            width: 100%;
+            max-width: 800px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+            background-color: #ffffff;
+
+            &::placeholder {
+                color: #94a3b8;
+                opacity: 1;
+                font-size: 1rem;
+            }
+            &:focus {
+                border-color: #f97316;
+                outline: none;
+            }
+        }
+
+        button {
+            font-family: $font-inter;
+            font-weight: 900;
+            background-color: #f97316;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 0.9rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            font-size: 1rem;
+            transition: background-color 0.3s ease-in-out;
+            &:hover {
+                background-color: transparent;
+                box-sizing: border-box;
+                border: 2px solid white;
+                color: white;
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .subscribe-section {
+        .subscribe-form {
+            width: 100%;
+            input {
+                max-width: 75%;
+            }
+            button {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .subscribe-section {
+        .subscribe-form {
+            width: 100%;
+            input {
+                max-width: 75%;
+            }
+            button {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .subscribe-section {
+        .subscribe-form {
+            width: 100%;
+            input {
+                max-width: 75%;
+            }
+            button {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .subscribe-section {
+        .subscribe-form {
+            width: 100%;
+            input {
+                max-width: 75%;
+            }
+            button {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .subscribe-section {
+        .subscribe-form {
+            width: 70%;
+            input {
+                max-width: 75%;
+            }
+            button {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

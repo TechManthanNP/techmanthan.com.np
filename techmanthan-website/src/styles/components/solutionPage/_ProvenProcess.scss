@@ -1,0 +1,320 @@
+@import "../../abstracts/variables";
+/* Tablet */
+// Mobile-first styles (up to 768px)
+@media (max-width: 767px) {
+  // Mobile-first styles (up to 768px)
+  .proven-process-section {
+    padding: 2rem 1.25rem;
+    background: #0a1128;
+    color: #fff;
+    text-align: center;
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+
+      .highlight {
+        color: #ff7a00;
+      }
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #d1d5db;
+      margin-bottom: 2rem;
+    }
+
+    .process-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+
+      .process-step-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        // Force step first, text second
+        .process-step {
+          order: 1;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.8rem;
+          color: #0a1128;
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+
+        .step-info {
+          order: 2;
+          max-width: 320px;
+
+          .step-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+          }
+
+          .step-desc {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #d1d5db;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .proven-process-section {
+    padding: 2rem;
+    background: #0a1128;
+    color: #fff;
+    text-align: left;
+    height: 600px;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+
+      .highlight {
+        color: #ff7a00;
+      }
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 12rem;
+      color: #cbd5e1;
+    }
+
+    .process-flow {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+    }
+
+    .process-step-wrapper {
+      position: relative;
+      width: 160px;
+
+      &:not(:first-child) {
+        margin-left: 5px;
+      }
+
+      .process-step {
+        width: 160px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%);
+        color: #000820;
+        font-size: 1.5rem;
+      }
+
+      .step-info {
+        width: 250px;
+        background: transparent;
+        border: 1px solid #818181;
+        padding: 1rem;
+        border-radius: 4px;
+        text-align: left;
+        position: absolute;
+
+        .step-title {
+          font-weight: 600;
+          font-size: 0.9rem;
+          margin-bottom: 0.4rem;
+        }
+
+        .step-desc {
+          font-size: 0.75rem;
+          color: #cbd5e1;
+        }
+
+        &.top {
+          bottom: 140px;
+          left: 50%;
+          transform: translateX(-50%);
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) rotate(-15deg);
+            width: 2px;
+            height: 40px;
+            background: #fff;
+          }
+        }
+
+        &.bottom {
+          top: 140px;
+          left: 50%;
+          transform: translateX(-50%);
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) rotate(20deg);
+            width: 2px;
+            height: 40px;
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+/* small desktops */
+@media (min-width: 920px) {
+  .proven-process-section {
+    padding: 4rem 5rem;
+    height: 700px;
+
+    .section-title {
+      font-size: 3rem;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 12rem;
+    }
+
+    .process-step-wrapper {
+      width: 200px;
+
+      .process-step {
+        width: 200px;
+        height: 120px;
+        font-size: 1.8rem;
+      }
+
+      .step-info {
+        width: 280px;
+
+        .step-title {
+          font-size: 1rem;
+        }
+        .step-desc {
+          font-size: 0.85rem;
+        }
+        &.top {
+          bottom: 160px;
+
+          &::after {
+            height: 50px;
+          }
+        }
+
+        &.bottom {
+          top: 160px;
+
+          &::after {
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium desktops (your original 1250px adjustments) */
+@media (min-width: 1250px) {
+  .proven-process-section {
+    .process-step-wrapper {
+      .step-info {
+        &.top {
+          bottom: 170px;
+          left: 80%;
+          transform: translateX(-50%);
+
+          &::after {
+            left: 30%;
+            transform: translateX(-50%) rotate(15deg);
+            height: 55px;
+          }
+        }
+
+        &.bottom {
+          top: 170px;
+          left: 2%;
+          transform: translateX(-50%);
+
+          &::after {
+            left: 70%;
+            transform: translateX(-50%) rotate(20deg);
+            height: 53px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large desktops */
+@media (min-width: 1440px) {
+  .proven-process-section {
+    height: 980px;
+
+    .subtitle {
+      margin-bottom: 19rem;
+      color: #fff;
+    }
+
+    .process-step-wrapper {
+      width: 280px;
+
+      .process-step {
+        width: 280px;
+        height: 180px;
+        font-size: 70px;
+      }
+
+      .step-info {
+        width: 400px;
+
+        .step-title {
+          font-size: 1.85rem;
+        }
+        .step-desc {
+          font-size: 1.25rem;
+        }
+
+        &.top {
+          bottom: 250px;
+          left: 60%;
+          transform: translateX(-60%);
+
+          &::after {
+            height: 75px;
+            left: 50%;
+          }
+        }
+
+        &.bottom {
+          top: 250px;
+          left: 15%;
+          transform: translateX(-40%);
+
+          &::after {
+            height: 75px;
+            left: 50%;
+          }
+        }
+      }
+    }
+  }
+}

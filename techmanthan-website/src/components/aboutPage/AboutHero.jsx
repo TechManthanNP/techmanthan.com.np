@@ -2,6 +2,7 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "../../styles/components/aboutPage/_AboutHero.scss";
 
 const images = [
@@ -55,13 +56,34 @@ const AboutHero = () => {
       <div className="overlay" />
 
       <div className="content">
-        <h1>About Us</h1>
-        <p>
-          Founded in April 2025 in Bhaktapur, Tech Manthan was born from a
-          vision to redefine how Nepal learns and innovates. 'Manthan', meaning
-          to churn, reflects our drive to stir progress by empowering local
-          talent and bridging Nepal’s heritage with the future of technology.
-        </p>
+        <motion.div
+          className="scroll-text"
+          initial={{ y: "100%" }}
+          whileInView={{ y: "0%" }}
+          animate={{ y: "0%" }} 
+          transition={{ duration: 5, ease: "easeOut" }}
+          viewport={{ once: false }}
+        >
+          <h1>
+            <span>Founded</span> in 2025
+          </h1>
+          <p>
+            We set out with a mission to redefine how enterprises leverage
+            artificial intelligence, not with buzzwords, but with real,
+            measurable value.
+          </p>
+          <p>
+            We build intelligent software designed to address the practical
+            challenges modern organizations. From automating workflows to
+            delivering predictive insights, our solutions are built with
+            scalability, security, and impact at the core. face.
+          </p>
+          <p>
+            As a startup, we're agile, curious, and deeply committed to creating
+            technology that adapts, evolves, and delivers for the businesses of
+            today and the needs of tomorrow.
+          </p>
+        </motion.div>
       </div>
 
       <div className="dots">

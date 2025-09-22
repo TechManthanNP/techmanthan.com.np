@@ -1,4 +1,5 @@
+import { redirect } from "next/navigation";
+
 export default function CareerPage() {
-    return <h1>Careers</h1>
-  }
-  
+  redirect("/careers/jobs");
+}

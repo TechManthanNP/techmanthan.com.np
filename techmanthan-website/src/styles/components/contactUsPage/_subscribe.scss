@@ -1,0 +1,163 @@
+.subscribe-section {
+  display: flex;
+  flex-direction: column; // mobile stack
+  gap: 2rem;
+  padding: 2rem;
+  background: #030b1a;
+  color: #fff;
+
+  .map-container {
+    width: 100%;
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 4px;
+    }
+  }
+
+  .form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .subscribe-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+
+      input {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        border-radius: 4px;
+        border: none;
+        font-size: 1rem;
+      }
+
+      button {
+        background: #f17006;
+        color: #2f1b0b;
+        border: none;
+        border-radius: 4px;
+        padding: 0.6rem 1.2rem;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.3s;
+        width: 100%;
+
+        &:hover {
+          background: #d65d05;
+        }
+      }
+    }
+
+    .status-msg {
+      font-size: 0.85rem;
+      text-align: center;
+
+      &.error {
+        color: #992b2b;
+      }
+      &.success {
+        color: hsl(150, 38%, 95%);
+      }
+    }
+  }
+}
+
+/* -------------------------
+   Breakpoints (Mobile First)
+------------------------- */
+
+/* Tablet (≥ 930px) */
+@media (min-width: 930px) {
+  .subscribe-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 3rem 4rem;
+
+    .map-container {
+      flex: 0 0 45%;
+      iframe {
+        height: 350px;
+      }
+    }
+
+    .form-container {
+      flex: 0 0 50%;
+      h2 {
+        text-align: left;
+        font-size: 1.75rem;
+      }
+      .subscribe-form {
+        button {
+          width: fit-content;
+          font-size: 1.2rem;
+          padding: 0.6rem 2rem;
+        }
+      }
+      .status-msg {
+        text-align: left;
+      }
+    }
+  }
+}
+
+/* Laptop (≥ 1024px) */
+@media (min-width: 1024px) {
+  .subscribe-section {
+    gap: 3rem;
+    padding: 3.5rem 6rem;
+    align-items: center;
+
+    .map-container iframe {
+      height: 400px;
+    }
+
+    .form-container {
+      gap: 2rem;
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+/* Desktop (≥ 1440px) */
+@media (min-width: 1440px) {
+  .subscribe-section {
+    justify-content: space-between;
+    padding: 4rem 8rem;
+
+    .map-container {
+      flex: 0 0 40%;
+      iframe {
+        height: 437px;
+      }
+    }
+
+    .form-container {
+      flex: 0 0 55%;
+      gap: 2.25rem;
+      h2 {
+        font-size: 2rem;
+      }
+      .subscribe-form {
+        gap: 2.25rem;
+        button {
+          font-size: 1.5rem;
+          padding: 0.5rem 2.8rem;
+          width: 210px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../../abstracts/variables";
+
+.hero-wrapper {
+  position: relative;
+  height: 90vh; // full height instead of 90vh
+  width: 100%;
+
+  .background {
+    position: absolute;
+    inset: 0; // shorthand for top, right, bottom, left = 0
+    overflow: hidden;
+
+    video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.3);
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(14, 18, 71, 0.49); // #0e12477c
+      z-index: 1;
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: $font-space-grotesk;
+    padding: 0 1rem;
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3.6rem); // responsive without many breakpoints
+      line-height: 1.2;
+      font-weight: 900;
+      color: white;
+    }
+
+    span {
+      color: #f17006;
+    }
+  }
+}
+
+/* Optional: Keep only the largest breakpoint for fine-tuning */
+@media (min-width: 1440px) {
+  .hero-wrapper .hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+}

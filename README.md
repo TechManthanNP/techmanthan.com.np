@@ -70,6 +70,35 @@ Then visit: `http://localhost:3000`
 
 ---
 
+## 🚢 Deployment (Netlify)
+
+### Option A: Netlify UI (Git-connected)
+
+1. Push your code to a Git host (GitLab/GitHub).
+2. In Netlify, choose **Add new site → Import an existing project** and connect the repo.
+3. Build settings:
+   - Build command: `npm run build`
+   - Publish directory: .next
+   - Functions directory: .netlify/functions (auto-created)
+4. Environment variables (Site settings → Environment variables): add `EMAIL_USER` and `EMAIL_PASS` to match your `.env.local`.
+5. Deploy. Netlify’s Next.js runtime will auto-detect the framework and create serverless functions for the API routes.
+
+### Option B: Netlify CLI (manual deploy)
+
+```bash
+npm install -g netlify-cli
+netlify login
+netlify init          # link or create the site
+netlify deploy --build --prod
+```
+
+Notes:
+- Use Node.js 18 or newer in Netlify (Site settings → Build & deploy → Environment → Node version) to match Next.js 15 requirements.
+- If you rotate credentials, update them in Netlify env vars and redeploy to refresh the functions.
+- The generated static assets live in .next and serverless outputs in .netlify/functions; Netlify handles routing automatically for the app router.
+
+---
+
 ## 🧱 Technologies Used
 
 - Next.js

@@ -18,7 +18,7 @@ const teamMembers = [
   {
     name: "Laxman Maharjan",
     role: "CTO & Co-Founder",
-    profession: "Full Stack Developer",
+    profession: "Software Engineer",
     image: "/images/team2.jpg",
     linkedIn: "https://linkedin.com/in/laxman-maharjan",
     email: "techmanthan.info@gmail.com",

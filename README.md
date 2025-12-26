@@ -8,10 +8,13 @@ Welcome to the official website repository for **TechManthan**, a platform showc
 
 This project is the **official website of TechManthan**, built with:
 
-- **Next.js**
-- **Sass (SCSS)**
+- **Next.js 16.1.1** - React framework for production
+- **Sass (SCSS)** - Advanced CSS styling
+- **React 19** - Latest React library
+- **Framer Motion** - Animation library
+- **Nodemailer** - Email service for contact forms
 
-The website features multiple pages such as Home, About Us, ARC, and more, all designed to be responsive and user-friendly.
+The website features multiple pages such as Home, About Us, ARC, Products, Solutions, Careers, Contact, and more, all designed to be responsive and user-friendly. It includes career portals, internship programs, and product showcases.
 
 ---
 

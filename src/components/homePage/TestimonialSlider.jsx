@@ -4,7 +4,7 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "TechManthan has transformed the way we approach digital innovation. Their expertise in AI and strategic thinking has been instrumental in our success. Highly recommended for any organization looking to leverage cutting-edge technology solutions.",
       author: "Sushil Dyopala",
       role: "Founder & CEO",
       highlight: "techmanthan",

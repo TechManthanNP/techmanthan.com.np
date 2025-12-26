@@ -11,9 +11,9 @@ const teamMembers = [
     profession: "AI Engineer",
     image: "/images/team1.jpg",
     linkedIn: "https://linkedin.com/in/sushil-dyopala",
-    email: "sushil@example.com",
+    email: "techmanthan.info@gmail.com",
     phone: "+977-9801234567",
-    bio: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sushil leads our team with a vision for innovation and excellence in AI solutions.",
+    bio: "Sushil is a visionary leader with extensive experience in AI and machine learning. He founded TechManthan with a mission to deliver innovative, scalable technology solutions that empower businesses to thrive in the digital age.",
   },
   {
     name: "Laxman Maharjan",
@@ -21,9 +21,9 @@ const teamMembers = [
     profession: "Full Stack Developer",
     image: "/images/team2.jpg",
     linkedIn: "https://linkedin.com/in/laxman-maharjan",
-    email: "laxman@example.com",
+    email: "techmanthan.info@gmail.com",
     phone: "+977-9802345678",
-    bio: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Laxman excels at designing robust, scalable tech infrastructure and leads the development team with cutting-edge solutions.",
+    bio: "Laxman drives technological excellence with deep expertise in AI-driven Solutions, Backend engineering, and Frontend engineering. He architects scalable systems that seamlessly blend innovation with reliability.",
   },
   {
     name: "Aliza Kumpakha",
@@ -31,9 +31,9 @@ const teamMembers = [
     profession: "Agile Project Coordinator",
     image: "/images/team3.jpg",
     linkedIn: "https://linkedin.com/in/aliza-kumpakha",
-    email: "aliza@example.com",
+    email: "techmanthan.info@gmail.com",
     phone: "+977-9803456789",
-    bio: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliza ensures timely delivery, resource alignment, and seamless coordination across departments for successful project execution.",
+    bio: "Aliza is a strategic Operations Manager who ensures seamless coordination between teams and clients. Her attention to detail and commitment to excellence guarantee that every project is delivered on time and exceeds expectations.",
   },
 ];
 

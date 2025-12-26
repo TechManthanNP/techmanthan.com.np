@@ -96,6 +96,7 @@ netlify deploy --build --prod
 ```
 
 Notes:
+
 - Use Node.js 18 or newer in Netlify (Site settings → Build & deploy → Environment → Node version) to match Next.js 15 requirements.
 - If you rotate credentials, update them in Netlify env vars and redeploy to refresh the functions.
 - The generated static assets live in .next and serverless outputs in .netlify/functions; Netlify handles routing automatically for the app router.

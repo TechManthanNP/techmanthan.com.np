@@ -14,27 +14,27 @@ const slides = [
     image: "/images/ai-slide-1.png",
   },
   {
-    title: "AI Strategy & Transformation",
+    title: "Custom AI Development",
     description:
-      "Identify high-value opportunities, define a strategic roadmap, and align AI initiatives with business goals.",
+      "Build intelligent systems tailored to your business needs with machine learning, NLP, and computer vision solutions.",
     image: "/images/ai-slide-1.png",
   },
   {
-    title: "AI Strategy & Transformation",
+    title: "Data Analytics & Insights",
     description:
-      "Identify high-value opportunities, define a strategic roadmap, and align AI initiatives with business goals.",
+      "Transform raw data into actionable intelligence. Extract meaningful patterns and drive informed decision-making across your organization.",
     image: "/images/ai-slide-1.png",
   },
   {
-    title: "AI Strategy & Transformation",
+    title: "Process Automation",
     description:
-      "Identify high-value opportunities, define a strategic roadmap, and align AI initiatives with business goals.",
+      "Automate repetitive tasks and streamline workflows. Reduce costs, improve efficiency, and free your team to focus on strategic work.",
     image: "/images/ai-slide-1.png",
   },
   {
-    title: "AI Strategy & Transformation",
+    title: "AI Model Deployment & Support",
     description:
-      "Identify high-value opportunities, define a strategic roadmap, and align AI initiatives with business goals.",
+      "Deploy, monitor, and optimize AI models in production. Ensure continuous improvement and sustained performance across all systems.",
     image: "/images/ai-slide-1.png",
   },
 ];

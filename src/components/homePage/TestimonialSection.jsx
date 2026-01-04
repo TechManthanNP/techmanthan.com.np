@@ -16,7 +16,7 @@ const testimonials = [
   },
   {
     quote:
-      "We do believe the most impactful technology is simple, purposeful, and built for the real world. Everything we create is designed to help organizations operate better, move smarter, and grow faster.",
+      "Our mission is to architect solutions that seamlessly blend innovation with reliability. We focus on building scalable systems that solve today's challenges while preparing for tomorrow's opportunities.",
     author: "Laxman Maharjan",
     role: "CTO & Co-Founder",
     highlight: "techmanthan",
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     quote:
-      "We and believe the most impactful technology is simple, purposeful, and built for the real world. Everything we create is designed to help organizations operate better, move smarter, and grow faster.",
+      "Success is about precision and collaboration. We ensure every project is delivered with excellence, every deadline is met, and every team member works in perfect harmony to achieve remarkable results.",
     author: "Aliza Kumpakha",
     role: "Operations Manager",
     highlight: "techmanthan",

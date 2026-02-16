@@ -1,7 +1,7 @@
 @import "../../abstracts/variables";
 
 .features {
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: space-around;
     background-color: #f1f1f1;
+    overflow-x: hidden;
 
     .section-heading {
         max-width: 80%;
@@ -317,5 +318,12 @@
                 }
             }
         }
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .features {
+        padding: 4rem 2rem;
     }
 }

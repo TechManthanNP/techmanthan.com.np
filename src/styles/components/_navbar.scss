@@ -124,7 +124,7 @@
         top: 0;
         right: 0;
         height: 100vh;
-        width: 50%; // half screen
+        width: 100%; // full screen on mobile
         background: rgb(15, 23, 42);
         color: white;
         display: flex;
@@ -182,6 +182,8 @@
 }
 @media (min-width: 576px) and (max-width: 790px) {
     .navbar {
+        padding-left: 1rem;
+        padding-right: 1rem;
         &__links {
             display: none;
         }
@@ -189,8 +191,10 @@
             display: block;
         }
         &__drawer {
+            width: 70%;
             ul {
-                padding-right: 8rem;
+                padding-right: 2rem;
+                padding-left: 2rem;
                 // border: 2px red solid;
                 li {
                     margin: 1.5rem 0;

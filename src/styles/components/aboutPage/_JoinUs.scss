@@ -2,9 +2,9 @@
 
 .build-with-us {
     text-align: center;
-    padding: 40px 0px;
+    padding: 3rem 1.5rem;
     background: #fff;
-    height: 35vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +17,8 @@
         font-family: $font-space-grotesk;
         margin-bottom: 15px;
         color: #000;
+        max-width: 900px;
+        line-height: 1.2;
     }
 
     p {
@@ -26,6 +28,7 @@
         color: #111;
         max-width: 60%;
         margin: 0 auto 20px;
+        line-height: 1.4;
 
         .highlight {
             color: #ff6600; // orange text
@@ -79,6 +82,40 @@
                 right: 45%; // move into button
                 opacity: 1;
             }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .build-with-us {
+        padding: 2.5rem 1rem;
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            max-width: 100%;
+        }
+        p {
+            font-size: 1rem;
+            max-width: 100%;
+            margin-bottom: 1rem;
+        }
+        .join-btn {
+            font-size: 1rem;
+            padding: 0.7rem 1.5rem;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .build-with-us {
+        padding: 3rem 1.25rem;
+        h2 {
+            font-size: 2rem;
+            max-width: 100%;
+        }
+        p {
+            font-size: 1.2rem;
+            max-width: 85%;
         }
     }
 }

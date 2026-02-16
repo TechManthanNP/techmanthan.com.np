@@ -106,8 +106,8 @@
 }
 @media (max-width: 576px) {
   .contact-section {
-    padding: 5rem 3rem;
-    gap: 2rem;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
     .map-container {
       iframe {
         height: 10rem;
@@ -120,7 +120,7 @@
 
 @media (min-width: 576px) and (max-width: 767px) {
   .contact-section {
-    padding: 5rem 3rem;
+    padding: 3rem 1.5rem;
     gap: 2rem;
     .map-container {
       iframe {
@@ -133,7 +133,7 @@
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .contact-section {
-    padding: 5rem 3rem;
+    padding: 3rem 2rem;
     gap: 2rem;
     .map-container {
       iframe {
@@ -146,7 +146,7 @@
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .contact-section {
-    padding: 5rem 3rem;
+    padding: 4rem 3rem;
     gap: 2rem;
     .map-container {
       iframe {

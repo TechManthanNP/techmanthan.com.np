@@ -68,7 +68,7 @@ export default function AnimatedPath({
       viewBox="0 0 800 200"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="none"
-      style={{ width: '100%', height: '200px', overflow: 'visible' }}
+      style={{ width: '100%', height: '200px', overflow: 'hidden' }}
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay, duration: 1, ease: 'easeOut' }}

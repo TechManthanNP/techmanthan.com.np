@@ -1,8 +1,7 @@
 @import "../../abstracts/variables";
 .enterprise-section {
-    max-width: 100vw;
     height: 75vh;
-    padding: 4rem 5rem;
+    padding: 2rem 1rem;
     gap: 2rem;
     background: #f2f2f2;
     display: flex;
@@ -255,7 +254,7 @@
         height: 90vh;
         padding: 0;
         .content-left {
-            width: 100vw;
+            width: 100%;
             // border: 2px red solid;
             padding: 0;
             align-items: center;
@@ -324,7 +323,7 @@
         height: 90vh;
         padding: 0;
         .content-left {
-            width: 100vw;
+            width: 100%;
             // border: 2px red solid;
             padding: 0;
             align-items: center;
@@ -499,4 +498,133 @@
     }
 }
 @media (min-width: 1200px) {
+    .enterprise-section {
+        padding: 4rem 5rem;
+        height: 75vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .enterprise-section {
+        height: auto;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+        flex-direction: column;
+        
+        .content-left {
+            width: 100%;
+            padding: 0;
+            
+            h4 {
+                font-size: 1.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .points {
+                max-width: 100%;
+                
+                .arrow-bullets {
+                    li {
+                        font-size: 1rem;
+                        padding-left: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+        
+        .carousel-wrapper {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            
+            .embla__slide {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .card {
+                img {
+                    height: 200px;
+                }
+                h3 {
+                    font-size: 1.1rem;
+                }
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+            
+            .carousel-btn {
+                width: 35px;
+                height: 35px;
+                
+                &.left {
+                    left: 0;
+                }
+                &.right {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .enterprise-section {
+        height: auto;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        flex-direction: column;
+        
+        .content-left {
+            width: 100%;
+            
+            h4 {
+                font-size: 1.4rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+                margin-bottom: 1.8rem;
+            }
+            
+            .points {
+                max-width: 100%;
+                
+                .arrow-bullets {
+                    li {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+        
+        .carousel-wrapper {
+            width: 100%;
+            height: auto;
+            min-height: 350px;
+            
+            .embla__slide {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                
+                &.left {
+                    left: -20px;
+                }
+                &.right {
+                    right: -20px;
+                }
+            }
+        }
+    }
 }

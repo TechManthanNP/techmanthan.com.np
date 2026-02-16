@@ -16,6 +16,8 @@
         font-weight: 700;
         margin-bottom: 0.5rem;
         color: #ffffff;
+        max-width: 900px;
+        line-height: 1.2;
         // font-family: "hanken-grotesk", sans-serif;
     }
 
@@ -24,6 +26,8 @@
         font-size: 1.1rem;
         margin-bottom: 1.5rem;
         color: #ffffff;
+        max-width: 900px;
+        line-height: 1.4;
         // font-family: "hanken-grotesk", sans-serif;
     }
 
@@ -79,10 +83,19 @@
 }
 @media (max-width: 576px) {
     .subscribe-section {
+        padding: 3rem 1rem;
+        h2 {
+            font-size: 1.6rem;
+            max-width: 100%;
+        }
+        p {
+            font-size: 0.95rem;
+            max-width: 100%;
+        }
         .subscribe-form {
             width: 100%;
             input {
-                max-width: 75%;
+                max-width: 100%;
             }
             button {
                 padding: 0.5rem 1rem;
@@ -94,10 +107,19 @@
 
 @media (min-width: 576px) and (max-width: 767px) {
     .subscribe-section {
+        padding: 3.5rem 1.5rem;
+        h2 {
+            font-size: 1.8rem;
+            max-width: 100%;
+        }
+        p {
+            font-size: 1rem;
+            max-width: 100%;
+        }
         .subscribe-form {
             width: 100%;
             input {
-                max-width: 75%;
+                max-width: 100%;
             }
             button {
                 padding: 0.5rem 1rem;
@@ -111,7 +133,7 @@
         .subscribe-form {
             width: 100%;
             input {
-                max-width: 75%;
+                max-width: 100%;
             }
             button {
                 padding: 0.5rem 1rem;
@@ -125,7 +147,7 @@
         .subscribe-form {
             width: 100%;
             input {
-                max-width: 75%;
+                max-width: 100%;
             }
             button {
                 padding: 0.5rem 1rem;

@@ -76,7 +76,7 @@ const AboutHero = () => {
             We build intelligent software designed to address the practical
             challenges modern organizations. From automating workflows to
             delivering predictive insights, our solutions are built with
-            scalability, security, and impact at the core. face.
+            scalability, security, and impact at the core.
           </p>
           <p>
             As a startup, we're agile, curious, and deeply committed to creating

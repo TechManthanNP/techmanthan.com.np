@@ -431,7 +431,7 @@ document.querySelectorAll('.rv').forEach(function(e,i){e.style.transitionDelay=(
 if(RM)document.querySelectorAll('.viz svg').forEach(function(v){if(v.pauseAnimations)v.pauseAnimations()});
 /* form: Netlify Forms */
 $('f').addEventListener('submit',function(e){e.preventDefault();var f=e.target,b=f.querySelector('button'),ok=$('ok');b.disabled=true;b.textContent='Sending...';ok.style.color='';ok.textContent='';
-fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f).entries()))})
 .then(function(r){if(!r.ok)throw 0;f.reset();ok.textContent='Thank you. We have received your message and will reply soon.'})
 .catch(function(){ok.style.color='#ff8a8a';ok.textContent='Could not send. Please email techmanthan.info@gmail.com instead.'})
 .finally(function(){b.disabled=false;b.textContent='Send message'})});

@@ -3,9 +3,19 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { firstName, middleName, lastName, email, message } = body;
+    const {
+      firstName,
+      middleName,
+      lastName,
+      name,
+      email,
+      company,
+      message,
+    } = body;
+    const contactName =
+      [firstName, middleName, lastName].filter(Boolean).join(" ") || name;
 
-    if (!firstName || !lastName || !email || !message) {
+    if (!contactName || !email || !message) {
       return new Response(
         JSON.stringify({ success: false, error: "Missing required fields" }),
         {
@@ -26,13 +36,12 @@ export async function POST(req) {
       from: `"Tech Manthan Contact Form" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       replyTo: email,
-      subject: `New Contact from ${firstName} ${lastName}`,
+      subject: `New Contact from ${contactName}`,
       html: `
         <h3>New Contact Request</h3>
-        <p><strong>Name:</strong> ${firstName} ${
-        middleName || ""
-      } ${lastName}</p>
+        <p><strong>Name:</strong> ${contactName}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Company:</strong> ${company || "Not provided"}</p>
         <p><strong>Message:</strong></p>
         <p style="white-space: pre-wrap;">${message}</p>
       `,

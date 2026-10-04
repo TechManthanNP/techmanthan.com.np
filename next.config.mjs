@@ -1,10 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-	async rewrites() {
-		return {
-			beforeFiles: [{ source: "/", destination: "/website.html" }],
-		};
-	},
-};
+const nextConfig = {};
 
 export default nextConfig;
